@@ -3,3 +3,71 @@ TESTED URLS
 "https://cnn.com/2019/09/21/europe/ukraine-trump-analysis-intl/index.html";
 "https://www.vox.com/future-perfect/2019/8/5/20750259/facebook-ai-mind-reading-brain-computer-interface";
 "https://www.vanityfair.com/style/2019/11/kanye-west-christian-genius-billionaire";
+"https://quillette.com/2019/09/21/why-has-kamala-harriss-campaign-fizzled/";
+"https://news.yahoo.com/trump-jr-booed-off-stage-094157937.html";
+"https://www.latimes.com/california/story/2019-11-10/chesa-boudin-is-new-district-attorney-in-san-francisco#nt=1col-7030col1-main";
+"https://www.usatoday.com/story/news/politics/2019/11/11/supreme-court-hears-daca-challenge-700000-dreamers/2533001001/";
+"https://abcnews.go.com/International/wireStory/hong-kong-protester-appears-shot-police-online-video-66900386?cid=clicksource_4380645_null_twopack_hed";
+
+TODO
+nytimes http://www.nytimes.com/
+nbcnews http://www.nbcnews.com/
+dailymail https://www.dailymail.co.uk/home/index.html
+washingtonpost http://www.washingtonpost.com/
+wsj http://www.wsj.com/
+theguardian https://www.theguardian.com/
+bbc http://news.bbc.co.uk/
+axios
+alternet
+apnews
+bloomberg
+theblaze
+breitbart
+businessinsider
+buzzfeed
+buzzfeednews
+cbc
+cbsnews
+csmonitor
+ctvnews
+dailywire
+democracynow
+thefederalist
+forbes
+globalnews
+theglobeandmail
+infowars
+jacobinmag
+kotaku
+macleans
+mail.ru
+metro.co.uk
+motherjones
+nationalreview
+nypost     
+newsmax
+npr
+politico
+reuters
+slate
+spectator
+rt
+techcrunch
+techradar
+theatlantic
+thedailybeast
+dailycaller
+economist
+thehill
+theintercept
+thenation
+newyorker
+time
+thestar
+torontosun
+ubyssey
+wired
+quantamagazine
+quillette
+washingtontimes
+huffpost

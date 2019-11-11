@@ -5,8 +5,19 @@ const cheerio = require("cheerio");
 const url =
 	"https://cnn.com/2019/09/21/europe/ukraine-trump-analysis-intl/index.html";
 
-//FIXME: for offline use only with example cnn.html file
-//const html = fs.readFileSync("cnn.html", "utf8");
+/* FIXME: for offline use only with example cnn.html file:
+const html = fs.readFileSync("cnn.html", "utf8");
+parseData(html);
+*/
+
+axios.get(url).then(
+	response => {
+		if (response.status === 200) {
+			parseData(response.data);
+		}
+	},
+	error => console.log(error)
+);
 
 function parseData(html) {
 	const $ = cheerio.load(html);
@@ -56,16 +67,17 @@ function getDate($) {
 		9: $('meta[name="published_time_telegram"]').attr("content"),
 		10: $('meta[name="parsely-pub-date"]').attr("content"),
 		11: $('meta[property="og:article:published_time"]').attr("content"),
-		12: $('time[data-moment-preface="Published"]').attr("datetime"),
-		13: $('time[class="po-hr-fl__date"]').text(),
-		14: $('time[class="uhd9ir-0 lkqtha"]').attr("datetime"),
-		15: $('time[class="article-header__meta-pubdate separator"]').attr(
+		12: $('meta[property="lastPublishedDate"]').attr("content"),
+		13: $('time[data-moment-preface="Published"]').attr("datetime"),
+		14: $('time[class="po-hr-fl__date"]').text(),
+		15: $('time[class="uhd9ir-0 lkqtha"]').attr("datetime"),
+		16: $('time[class="article-header__meta-pubdate separator"]').attr(
 			"title"
 		),
-		16: $('time[id="date-published"]').attr("datetime"),
-		17: $('time[itemprop="dateCreated"]').attr("datetime"),
-		18: $("time").text()
-		// Just keep adding to this list to increase number of supported date tag variants
+		17: $('time[id="date-published"]').attr("datetime"),
+		18: $('time[itemprop="dateCreated"]').attr("datetime"),
+		19: $("time").text()
+		// Add to this list to increase number of supported date tag variants
 	};
 
 	for (var property in dateFunctions) {
@@ -80,14 +92,10 @@ function getDate($) {
 function getSnippets($) {
 	const snippets = [];
 	const snippetTags = [
-		'p[class="speakable"]',
-		'p[class="has-dropcap"]',
-		"p[id]",
-		'p[class="zn-body__paragraph speakable"]',
+		"p",
 		'div[class="zn-body__paragraph speakable"]',
-		'div[class="zn-body__paragraph"]',
-		"p"
-		// Just keep adding to this list to increase number of supported snippet tag variants
+		'div[class="zn-body__paragraph"]'
+		// Add to this list to increase number of supported snippet tag variants
 	];
 
 	let snippetsArrayLength = 0;
@@ -124,15 +132,3 @@ function filterAndFormat(snippets) {
 
 	return snippets;
 }
-
-//FIXME: for offline use only with example cnn.html file
-//parseData(html);
-
-axios.get(url).then(
-	response => {
-		if (response.status === 200) {
-			parseData(response.data);
-		}
-	},
-	error => console.log(error)
-);
