@@ -1,5 +1,5 @@
 const fs = require("fs");
-const request = require("request");
+const axios = require("axios");
 const cheerio = require("cheerio");
 
 const url =
@@ -128,10 +128,11 @@ function filterAndFormat(snippets) {
 //FIXME: for offline use only with example cnn.html file
 //parseData(html);
 
-request(url, (error, response, html) => {
-	if (!error) {
-		parseData(html);
-	} else {
-		console.log(error);
-	}
-});
+axios.get(url).then(
+	response => {
+		if (response.status === 200) {
+			parseData(response.data);
+		}
+	},
+	error => console.log(error)
+);
