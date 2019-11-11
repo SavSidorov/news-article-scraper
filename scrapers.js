@@ -1,6 +1,6 @@
 const fs = require("fs");
 const request = require("request");
-const cheerio = require("cheerio"); //Documentation at https://cheerio.js.org/
+const cheerio = require("cheerio");
 
 const url =
 	"https://cnn.com/2019/09/21/europe/ukraine-trump-analysis-intl/index.html";
@@ -80,9 +80,13 @@ function getDate($) {
 function getSnippets($) {
 	const snippets = [];
 	const snippetTags = [
+		'p[class="speakable"]',
+		'p[class="has-dropcap"]',
+		"p[id]",
 		'p[class="zn-body__paragraph speakable"]',
 		'div[class="zn-body__paragraph speakable"]',
-		'div[class="zn-body__paragraph"]'
+		'div[class="zn-body__paragraph"]',
+		"p"
 		// Just keep adding to this list to increase number of supported snippet tag variants
 	];
 
@@ -94,6 +98,29 @@ function getSnippets($) {
 		});
 		snippetsArrayLength = snippets.length;
 	});
+
+	return filterAndFormat(snippets);
+}
+
+function filterAndFormat(snippets) {
+	snippets = snippets.filter(function(value) {
+		return (
+			//Filter out empty snippets
+			value != "" &&
+			//Filter out short snippets
+			value.length >= 30 &&
+			//Filter out snippets with no lower case letters
+			/[a-z]/.test(value)
+		);
+	});
+
+	//Format all snippets
+	for (let i = 0; i < snippets.length; i++) {
+		snippets[i] = snippets[i].replace(/\n/g, "");
+		snippets[i] = snippets[i].replace(/\t/g, "");
+		snippets[i] = snippets[i].replace(/\s+/g, " ");
+		snippets[i] = snippets[i].trim();
+	}
 
 	return snippets;
 }
