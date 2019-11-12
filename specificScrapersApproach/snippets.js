@@ -11,16 +11,7 @@ module.exports = {
 			"latimes",
 			"usatoday",
 			"abcnews"
-			//TODO:
-			//"nytimes",
-			//"nbcnews",
-			//"dailymail",
-			//"washingtonpost",
-			//"wsj",
-			//"theguardian",
-			//"bbc",
-			//"vox",
-			//"vanityfair"
+			// Add to this list to increase number of supported urls
 		];
 
 		const snippetTags = [

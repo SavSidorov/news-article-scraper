@@ -1,4 +1,17 @@
 module.exports = {
+	abcnews: function(snippets) {
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filters out snippets w/ strings in question
+				!/contributed to this report./.test(value) &&
+				!/contribute to this report./.test(value) &&
+				!/contributed to this article./.test(value) &&
+				!/contribute to this article./.test(value)
+			);
+		});
+
+		return snippets;
+	},
 	cnn: function(snippets) {
 		snippets = snippets.filter(function(value) {
 			return (
@@ -13,6 +26,7 @@ module.exports = {
 				!/contribute to this report./.test(value) &&
 				!/contributed to this article./.test(value) &&
 				!/contribute to this article./.test(value) &&
+				!(/Analysis by/.test(value) && value.length <= 100) &&
 				!(/Updated/.test(value) && /20/.test(value)) &&
 				!/Chat with us in Facebook Messenger/.test(value)
 			);
@@ -57,6 +71,12 @@ module.exports = {
 			);
 		});
 
+		return snippets;
+	},
+	latimes: function(snippets) {
+		return snippets;
+	},
+	usatoday: function(snippets) {
 		return snippets;
 	},
 	yahoo: function(snippets) {

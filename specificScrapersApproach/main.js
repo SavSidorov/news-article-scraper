@@ -6,7 +6,7 @@ const date = require("./date.js");
 const snippets = require("./snippets.js");
 
 const url =
-	"https://news.yahoo.com/trump-impeachment-mac-thornberry-abc-this-week-165743982.html";
+	"https://abcnews.go.com/US/record-cold-hits-midwest-temperatures-plunge-east-coast/story?id=66935149";
 
 //FIXME: for offline use only with example cnn.html file:
 //const html = fs.readFileSync("cnn.html", "utf8");
