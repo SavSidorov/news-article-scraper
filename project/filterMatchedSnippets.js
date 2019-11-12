@@ -1,0 +1,73 @@
+module.exports = {
+	cnn: function(snippets) {
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filter out empty snippets
+				value != "" &&
+				//Filter out short snippets
+				value.length >= 30 &&
+				//Filter out snippets with no lower case letters
+				/[a-z]/.test(value) &&
+				//Filters out strings in question
+				!/contributed to this report./.test(value) &&
+				!/contribute to this report./.test(value) &&
+				!/contributed to this article./.test(value) &&
+				!/contribute to this article./.test(value) &&
+				!(/Updated/.test(value) && /20/.test(value)) &&
+				!/Chat with us in Facebook Messenger/.test(value)
+			);
+		});
+
+		//Filter existing snippets
+		for (let i = 0; i < snippets.length; i++) {
+			snippets[i] = snippets[i].replace(/\((CNN)\)/g, "");
+		}
+
+		return snippets;
+	},
+	foxnews: function(snippets) {
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filter out snippets with no lower case letters
+				/[a-z]/.test(value) &&
+				//Filters out strings in question
+				!/contributed to this report./.test(value) &&
+				!/contribute to this report./.test(value) &&
+				!/contributed to this article./.test(value) &&
+				!/contribute to this article./.test(value) &&
+				!/All rights reserved./.test(value)
+			);
+		});
+
+		return snippets;
+	},
+	foxbusiness: function(snippets) {
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filter out snippets with no lower case letters
+				/[a-z]/.test(value) &&
+				//Filters out strings in question
+				!/contributed to this report./.test(value) &&
+				!/contribute to this report./.test(value) &&
+				!/contributed to this article./.test(value) &&
+				!/contribute to this article./.test(value) &&
+				!/Continue Reading Below/.test(value) &&
+				!/All rights reserved./.test(value) &&
+				!/\((Terms & Conditions)\)/.test(value)
+			);
+		});
+
+		return snippets;
+	},
+	yahoo: function(snippets) {
+		//If "_____" snippet encountered, delete all array entries after it
+		for (let i = 0; i < snippets.length; i++) {
+			if (snippets[i] == "_____") {
+				snippets.splice(i, snippets.length - i);
+				break;
+			}
+		}
+
+		return snippets;
+	}
+};

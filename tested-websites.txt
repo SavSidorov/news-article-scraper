@@ -1,4 +1,4 @@
-TESTED URLS
+TESTED URLS WITH GENERAL SCRAPER
 "https://www.foxnews.com/us/mormon-families-flee-mexico-arizona-cartel-massacre";
 "https://cnn.com/2019/09/21/europe/ukraine-trump-analysis-intl/index.html";
 "https://www.vox.com/future-perfect/2019/8/5/20750259/facebook-ai-mind-reading-brain-computer-interface";
@@ -8,6 +8,17 @@ TESTED URLS
 "https://www.latimes.com/california/story/2019-11-10/chesa-boudin-is-new-district-attorney-in-san-francisco#nt=1col-7030col1-main";
 "https://www.usatoday.com/story/news/politics/2019/11/11/supreme-court-hears-daca-challenge-700000-dreamers/2533001001/";
 "https://abcnews.go.com/International/wireStory/hong-kong-protester-appears-shot-police-online-video-66900386?cid=clicksource_4380645_null_twopack_hed";
+
+TESTED URLS WITH SPECIFIC SCRAPER
+"https://cnn.com/2019/09/21/europe/ukraine-trump-analysis-intl/index.html";
+"https://edition.cnn.com/2019/11/11/asia/hong-kong-protests-dramatic-intl-hnk/index.html";
+"https://www.foxnews.com/opinion/kanye-west-church-jonathan-morris";
+"https://www.foxnews.com/us/mormon-families-flee-mexico-arizona-cartel-massacre";
+"https://www.foxbusiness.com/markets/stocks-trade-cautiously-ahead-of-trump-trade-speech";
+"https://www.foxbusiness.com/economy/dow-30000-trump-aide-says-its-coming";
+"https://news.yahoo.com/trump-impeachment-mac-thornberry-abc-this-week-165743982.html";
+"https://news.yahoo.com/trump-jr-booed-off-stage-094157937.html";
+
 
 TODO
 nytimes http://www.nytimes.com/
@@ -38,9 +49,7 @@ globalnews
 theglobeandmail
 infowars
 jacobinmag
-kotaku
 macleans
-mail.ru
 metro.co.uk
 motherjones
 nationalreview
@@ -52,8 +61,6 @@ reuters
 slate
 spectator
 rt
-techcrunch
-techradar
 theatlantic
 thedailybeast
 dailycaller
@@ -65,9 +72,6 @@ newyorker
 time
 thestar
 torontosun
-ubyssey
 wired
-quantamagazine
-quillette
 washingtontimes
 huffpost
