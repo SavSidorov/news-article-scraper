@@ -8,7 +8,7 @@ module.exports = {
 				value.length >= 30 &&
 				//Filter out snippets with no lower case letters
 				/[a-z]/.test(value) &&
-				//Filters out strings in question
+				//Filters out snippets w/ strings in question
 				!/contributed to this report./.test(value) &&
 				!/contribute to this report./.test(value) &&
 				!/contributed to this article./.test(value) &&
@@ -18,7 +18,7 @@ module.exports = {
 			);
 		});
 
-		//Filter existing snippets
+		//Format snippets
 		for (let i = 0; i < snippets.length; i++) {
 			snippets[i] = snippets[i].replace(/\((CNN)\)/g, "");
 		}
@@ -30,7 +30,7 @@ module.exports = {
 			return (
 				//Filter out snippets with no lower case letters
 				/[a-z]/.test(value) &&
-				//Filters out strings in question
+				//Filters out snippets w/ strings in question
 				!/contributed to this report./.test(value) &&
 				!/contribute to this report./.test(value) &&
 				!/contributed to this article./.test(value) &&
@@ -46,7 +46,7 @@ module.exports = {
 			return (
 				//Filter out snippets with no lower case letters
 				/[a-z]/.test(value) &&
-				//Filters out strings in question
+				//Filters out snippets w/ strings in question
 				!/contributed to this report./.test(value) &&
 				!/contribute to this report./.test(value) &&
 				!/contributed to this article./.test(value) &&
@@ -60,7 +60,7 @@ module.exports = {
 		return snippets;
 	},
 	yahoo: function(snippets) {
-		//If "_____" snippet encountered, delete all array entries after it
+		//If "_____" snippet encountered, delete all snippets after it
 		for (let i = 0; i < snippets.length; i++) {
 			if (snippets[i] == "_____") {
 				snippets.splice(i, snippets.length - i);

@@ -1,3 +1,16 @@
+HOW TO USE:
+
+This project scrapes the info (title, url, date, snippets) from news websites.
+
+Two approaches to the problem: general and specific. The general approach works for all websites, but not perfectly - you tend to get some junk in your snippets that's not part of the article itself. The specific approach works only for a select number of websites, but the snippets for each website are clean.
+
+In either case, run "node main.js" in order to use the program.
+
+The URL you're scraping can be changed at the top of the main.js file, for both approaches.
+
+I included HTML from a sample CNN article for offline use. Uncomment the commented code at the top of main.js, and get rid of the axios request to use. 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 TESTED URLS WITH GENERAL SCRAPER
 "https://www.foxnews.com/us/mormon-families-flee-mexico-arizona-cartel-massacre";
 "https://cnn.com/2019/09/21/europe/ukraine-trump-analysis-intl/index.html";
