@@ -1,5 +1,5 @@
 /** TEMPLATE
- infowars: function(snippets){
+ globalnews: function(snippets){
 	//content goes here 
 
 	return snippets
@@ -55,7 +55,7 @@ module.exports = {
 	buzzfeednews: function(snippets) {
 		snippets = snippets.filter(function(value) {
 			return (
-				//Filter out short snippets (larger than usual because of author snippets)
+				//Filter out short snippets
 				value.length >= 40 &&
 				//Filter out "By ...." snippets
 				!(value.length <= 150 && /By/.test(value)) &&
@@ -73,7 +73,7 @@ module.exports = {
 		return snippets;
 	},
 	cbsnews: function(snippets) {
-		//If "First published on ..." snippet encountered, delete all snippets after it
+		//If snippet encountered, delete all snippets after it
 		for (let i = 0; i < snippets.length; i++) {
 			if (/First published on/.test(snippets[i])) {
 				snippets.splice(i, snippets.length - i);
@@ -127,7 +127,7 @@ module.exports = {
 		return snippets;
 	},
 	ctvnews: function(snippets) {
-		//If "... was first published ____, 20xx." snippet encountered, delete all snippets after it
+		//If snippet encountered, delete all snippets after it
 		for (let i = 0; i < snippets.length; i++) {
 			if (/first published/.test(snippets[i]) && /20/.test(snippets[i])) {
 				snippets.splice(i, snippets.length - i);
@@ -205,12 +205,27 @@ module.exports = {
 
 		return snippets;
 	},
-	infowars: function(snippets) {
-		//content goes here
-		//latest breaking news
+	globalnews: function(snippets) {
 		snippets = snippets.filter(function(value) {
 			return (
-				//Filter out short snippets (larger than usual because of author snippets)
+				//Filter out short snippets
+				value.length >= 40 &&
+				//Filter out snippets with no lower case letters
+				/[a-z]/.test(value) &&
+				//Filters out snippets w/ strings in question
+				!/Want to discuss\?/.test(value) &&
+				!/delivered to your inbox ever weekday/.test(value) &&
+				!/READ MORE:/.test(value) &&
+				!/@globalnews.ca/.test(value)
+			);
+		});
+
+		return snippets;
+	},
+	infowars: function(snippets) {
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filter out short snippets
 				value.length >= 40 &&
 				//Filters out snippets w/ strings in question
 				!/latest breaking news/.test(value) &&
@@ -235,11 +250,146 @@ module.exports = {
 
 		return snippets;
 	},
+	metro: function(snippets) {
+		//content goes here
+		//@metro.co.uk
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filter out short snippets
+				value.length >= 40 &&
+				//Filters out snippets w/ strings in question
+				!/@metro.co.uk/.test(value) &&
+				!/MORE:/.test(value)
+			);
+		});
+
+		return snippets;
+	},
+	npr: function(snippets) {
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filter out short snippets
+				value.length >= 40 &&
+				//Filters out snippets w/ strings in question
+				!/Getty Images/.test(value) &&
+				!/hide caption/.test(value) &&
+				!/@npr.org/.test(value) &&
+				!(/Updated/.test(value) && /ET/.test(value)) &&
+				!(
+					(/is a/.test(value) ||
+						/is an/.test(value) ||
+						/is the/.test(value)) &&
+					/NPR/.test(value)
+				)
+			);
+		});
+
+		return snippets;
+	},
+	politico: function(snippets) {
+		//If snippet encountered, delete all snippets after it
+		for (let i = 0; i < snippets.length; i++) {
+			if (/©/.test(snippets[i])) {
+				snippets.splice(i, snippets.length - i);
+				break;
+			}
+		}
+
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filter out short snippets
+				value.length >= 40 &&
+				//Filter out snippets with no lower case letters
+				/[a-z]/.test(value) &&
+				//Filter out "By ...." snippets
+				!(value.length <= 150 && /By/.test(value)) &&
+				//Filters out snippets w/ strings in question
+				!/\|/.test(value) &&
+				!/politico\//.test(value)
+			);
+		});
+
+		return snippets;
+	},
+	rt: function(snippets) {
+		//If snippet encountered, delete all snippets after it
+		for (let i = 0; i < snippets.length; i++) {
+			if (/All rights reserved./.test(snippets[i])) {
+				snippets.splice(i, snippets.length - i);
+				break;
+			}
+		}
+
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filter out short snippets
+				value.length >= 40 &&
+				//Filters out snippets w/ strings in question
+				!/are solely those of the author/.test(value) &&
+				!/Share this story!/.test(value) &&
+				!/Share it with a friend!/.test(value)
+			);
+		});
+
+		return snippets;
+	},
+	spectator: function(snippets) {
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filter out short snippets
+				value.length >= 40
+			);
+		});
+
+		return snippets;
+	},
 	theblaze: function(snippets) {
 		snippets = snippets.filter(function(value) {
 			return (
 				//Filter out short snippets
 				value.length >= 40
+			);
+		});
+
+		return snippets;
+	},
+	thedailybeast: function(snippets) {
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filter out short snippets
+				value.length >= 40 &&
+				//Filters out snippets w/ strings in question
+				!/Got a tip?/.test(value)
+			);
+		});
+
+		return snippets;
+	},
+	thefederalist: function(snippets) {
+		//If snippet encountered, delete all snippets after it
+		for (let i = 0; i < snippets.length; i++) {
+			if (/All Rights Reserved./.test(snippets[i])) {
+				snippets.splice(i, snippets.length - i);
+				break;
+			}
+		}
+
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filter out short snippets
+				value.length >= 40
+			);
+		});
+
+		return snippets;
+	},
+	ubyssey: function(snippets) {
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filter out short snippets
+				value.length >= 40 &&
+				//Filters out snippets w/ strings in question
+				!((/AM/.test(value) || /PM/.test(value)) && /-/.test(value))
 			);
 		});
 

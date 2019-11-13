@@ -139,28 +139,75 @@ URLS TESTED WITH SPECIFIC SCRAPER:
 "https://www.infowars.com/whistleblower-eric-ciaramella-hosted-2016-wh-meeting-ordering-ukraine-officials-to-drop-probe-into-hunter-biden/";*
 "https://www.infowars.com/bernie-sanders-aoc-will-play-very-important-role-in-white-house-if-im-elected/";
 
+"https://thefederalist.com/2019/11/12/pete-buttigieg-spent-one-week-tv-ads-iowa/";
+"https://thefederalist.com/2019/11/12/democratic-sen-mazie-hirono-believe-in-climate-change-as-though-its-a-religion/";
+"https://thefederalist.com/2019/11/12/the-mandalorian-is-already-the-crown-jewel-of-disney-plus/";
+"https://thefederalist.com/2019/11/12/the-daily-northwestern-apology-is-a-harbinger/";
+"https://thefederalist.com/2019/11/12/alex-vindman-is-living-breathing-proof-that-the-deep-state-exists-and-it-is-corrupt/";
+
+"https://www.rt.com/op-ed/473269-bolivia-evo-morales-color-revolution/";
+"https://www.rt.com/news/473260-israel-gaza-strikes-politics/";
+"https://www.rt.com/op-ed/473274-northwestern-apology-journalism-traumatized-sessions/";
+"https://www.rt.com/news/473292-hong-kong-attack-woman-video/";
+"https://www.rt.com/news/473315-mars-changing-oxygen-levels-mystery/";
+
+"https://www.npr.org/2019/11/13/776819671/house-holds-1st-open-hearing-in-trump-impeachment-inquiry";
+"https://www.npr.org/2019/11/13/778602142/president-trump-hosts-turkeys-erdogan-despite-concerns-in-congress";
+"https://www.npr.org/sections/health-shots/2019/11/13/778261164/with-few-new-drugs-to-treat-antibiotic-resistance-how-best-to-deploy-them";
+"https://www.npr.org/2019/11/13/778545559/supreme-court-may-side-with-trump-on-dreamers";
+"https://www.npr.org/2019/11/12/778542614/fbi-reports-dip-in-hate-crimes-but-rise-in-violence";*
+
+"https://spectator.org/elizabeth-warren-makes-her-case-for-state-health-care-monopoly/";
+"https://spectator.org/michael-brendan-doughertys-very-irish-story/";
+"https://spectator.org/the-return-of-the-moron-vote/";
+"https://spectator.org/who-gets-buried-at-the-kremlin-time-for-a-post-revolutionary-purge/";
+"https://spectator.org/impeachment-vote-will-cost-these-dems-their-seats/";
+
+"https://metro.co.uk/2019/11/13/boris-johnson-heckled-visits-flood-victims-south-yorkshire-11089792/";
+"https://metro.co.uk/2019/11/12/cyclist-lying-across-four-train-seats-refuses-move-mum-baby-11087288/";
+"https://metro.co.uk/2019/11/13/pictured-primark-security-guard-got-shoplifters-perform-sex-acts-silence-11088217/";
+"https://metro.co.uk/2019/11/12/two-men-arrested-suspicion-terrorism-offences-11086930/";
+"https://metro.co.uk/2019/11/12/holly-willoughby-isnt-letting-piers-morgan-steal-moment-gemma-collins-gets-cosy-alan-carr-entertaining-itv-palooza-red-carpet-11087447/";
+
+"https://www.thedailybeast.com/ivanka-dad-dont-tweet-the-whistleblowers-name?ref=home";
+"https://www.thedailybeast.com/behind-los-angeles-bitter-war-to-abolish-the-olympics-for-good?ref=home";
+"https://www.thedailybeast.com/bara-jichova-tyson-set-out-to-expose-monogamy-as-a-sham-then-she-fell-in-love-with-her-subject?ref=home";
+"https://www.thedailybeast.com/ukraine-wants-to-set-the-record-straight-on-taylor-testimony?ref=home";
+"https://www.thedailybeast.com/jeff-garlin-weighs-in-on-the-great-fat-shaming-debate-between-bill-maher-and-james-corden";
+
+"https://www.ubyssey.ca/blog/sand-in-bad-places/";
+"https://www.ubyssey.ca/magazine/presence-of-mind/#resolve";
+"https://www.ubyssey.ca/news/Rogers-UBC-5G-smart-campus-project-launches/";
+"https://www.ubyssey.ca/news/staff-faculty-mental-health/";
+"https://www.ubyssey.ca/blog/i-went-on-halloween-club-crawl/";
+
+"https://www.politico.com/news/2019/11/13/impeachment-democrats-calculus-070401";
+"https://www.politico.com/news/magazine/2019/11/13/impeachment-republicans-trump-bill-clinton-070389";
+"https://www.politico.com/news/2019/11/13/donald-trump-impeachment-messaging-070124";
+"https://www.politico.com/news/2019/11/13/poll-voters-impeachment-070311";
+"https://www.politico.com/news/2019/11/12/mulvaney-impeachment-hearings-070342";
+
+"https://globalnews.ca/news/6160099/don-cherry-defends-comments-hockey-night-in-canada/?utm_source=Other&utm_medium=MostPopular&utm_campaign=2014";
+"https://globalnews.ca/news/6157812/don-cherry-you-people-rant-impact/?utm_source=Other&utm_medium=MostPopular&utm_campaign=2014";
+"https://globalnews.ca/news/6161997/trudeau-blanchet-meet-parliament/";
+"https://globalnews.ca/news/6158220/comparing-major-video-streaming-services-canada/?utm_source=Other&utm_medium=MostPopular&utm_campaign=2014";
+"https://globalnews.ca/news/6066815/what-is-fatty-liver/?utm_source=Other&utm_medium=MostPopular&utm_campaign=2014";
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 TODO:
-nytimes http://www.nytimes.com/
-nbcnews http://www.nbcnews.com/
-dailymail https://www.dailymail.co.uk/home/index.html
-washingtonpost http://www.washingtonpost.com/
-wsj http://www.wsj.com/
-theguardian https://www.theguardian.com/
-bbc http://news.bbc.co.uk/
-huffpost https://www.huffpost.com/
+http://www.nytimes.com/
+http://www.nbcnews.com/
+https://www.dailymail.co.uk/home/index.html
+http://www.washingtonpost.com/
+http://www.wsj.com/
+https://www.theguardian.com/
+http://news.bbc.co.uk/
+https://www.huffpost.com/
 
-https://thefederalist.com/
-https://globalnews.ca/
-https://jacobinmag.com/
-https://www.politico.com/
-https://metro.co.uk/
-https://www.npr.org/
-https://spectator.org/
-https://www.rt.com/
 https://www.thedailybeast.com/
 https://dailycaller.com/
 https://thehill.com/
 https://torontosun.com/
+https://www.techradar.com/
+https://techcrunch.com/

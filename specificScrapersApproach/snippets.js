@@ -22,17 +22,28 @@ module.exports = {
 			"vox",
 			"vanityfair",
 			"wired",
-			"infowars"
+			"infowars",
+			"thefederalist",
+			"rt",
+			"npr",
+			"spectator",
+			"metro",
+			"thedailybeast",
+			"ubyssey",
+			"politico",
+			"globalnews"
 			// Add to this list to increase number of supported urls
 		];
 		console.log("Number of supported websites: " + supportedUrls.length);
 
 		const snippetTags = [
-			"p",
 			'div[class="zn-body__paragraph speakable"]',
 			'div[class="zn-body__paragraph"]',
+			'div[class="article__summary summary "]',
+			'div[class="l-article__part"]',
 			"li[class=gnt_ar_b_ul_li]",
-			"blockquote"
+			"blockquote",
+			"p"
 			// Add to this list to increase number of supported snippet tag variants
 		];
 

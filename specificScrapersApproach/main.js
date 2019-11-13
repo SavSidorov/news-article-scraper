@@ -5,8 +5,7 @@ const cheerio = require("cheerio");
 const date = require("./date.js");
 const snippets = require("./snippets.js");
 
-const url =
-	"https://www.infowars.com/bernie-sanders-aoc-will-play-very-important-role-in-white-house-if-im-elected/";
+const url = "";
 
 axios.get(url).then(
 	response => {
