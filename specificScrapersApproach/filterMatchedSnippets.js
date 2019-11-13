@@ -2,11 +2,15 @@ module.exports = {
 	abcnews: function(snippets) {
 		snippets = snippets.filter(function(value) {
 			return (
+				//Filter out short snippets
+				value.length >= 40 &&
 				//Filters out snippets w/ strings in question
 				!/contributed to this report./.test(value) &&
 				!/contribute to this report./.test(value) &&
 				!/contributed to this article./.test(value) &&
-				!/contribute to this article./.test(value)
+				!/contribute to this article./.test(value) &&
+				!/ABC News'/.test(value) &&
+				!/Download the/.test(value)
 			);
 		});
 
@@ -15,10 +19,8 @@ module.exports = {
 	cnn: function(snippets) {
 		snippets = snippets.filter(function(value) {
 			return (
-				//Filter out empty snippets
-				value != "" &&
 				//Filter out short snippets
-				value.length >= 30 &&
+				value.length >= 40 &&
 				//Filter out snippets with no lower case letters
 				/[a-z]/.test(value) &&
 				//Filters out snippets w/ strings in question
@@ -28,7 +30,8 @@ module.exports = {
 				!/contribute to this article./.test(value) &&
 				!(/Analysis by/.test(value) && value.length <= 100) &&
 				!(/Updated/.test(value) && /20/.test(value)) &&
-				!/Chat with us in Facebook Messenger/.test(value)
+				!/Chat with us in Facebook Messenger/.test(value) &&
+				!/CNN Opinion/.test(value)
 			);
 		});
 
@@ -74,9 +77,31 @@ module.exports = {
 		return snippets;
 	},
 	latimes: function(snippets) {
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filter out short snippets
+				value.length >= 40 &&
+				//Filters out snippets w/ strings in question
+				!/contributed to this report./.test(value) &&
+				!/contribute to this report./.test(value) &&
+				!/contributed to this article./.test(value) &&
+				!/contribute to this article./.test(value)
+			);
+		});
+
 		return snippets;
 	},
 	usatoday: function(snippets) {
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filter out short snippets
+				value.length >= 40 &&
+				//Filters out snippets w/ strings in question
+				!/:\w/.test(value) &&
+				!/Click here /.test(value)
+			);
+		});
+
 		return snippets;
 	},
 	yahoo: function(snippets) {
@@ -87,6 +112,13 @@ module.exports = {
 				break;
 			}
 		}
+
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filter out short snippets
+				value.length >= 40
+			);
+		});
 
 		return snippets;
 	}

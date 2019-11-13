@@ -6,7 +6,7 @@ const date = require("./date.js");
 const snippets = require("./snippets.js");
 
 const url =
-	"https://abcnews.go.com/US/record-cold-hits-midwest-temperatures-plunge-east-coast/story?id=66935149";
+	"https://www.usatoday.com/story/sports/nhl/columnist/kevinallen/2019/11/11/don-cherry-popular-analyst-went-too-far-racist-remark/2569566001/?utm_source=taboola&utm_medium=exchange&utm_content=sports";
 
 //FIXME: for offline use only with example cnn.html file:
 //const html = fs.readFileSync("cnn.html", "utf8");

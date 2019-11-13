@@ -118,9 +118,21 @@ function filterAndFormat(snippets) {
 			//Filter out empty snippets
 			value != "" &&
 			//Filter out short snippets
-			value.length >= 30 &&
+			value.length >= 40 &&
 			//Filter out snippets with no lower case letters
-			/[a-z]/.test(value)
+			/[a-z]/.test(value) &&
+			//Filters out snippets w/ strings in question
+			!/contributed to this report./.test(value) &&
+			!/contribute to this report./.test(value) &&
+			!/contributed to this article./.test(value) &&
+			!/contribute to this article./.test(value) &&
+			!/All rights reserved./.test(value) &&
+			!/Download the/.test(value) &&
+			!(/Analysis by/.test(value) && value.length <= 100) &&
+			!(/Updated/.test(value) && /20/.test(value)) &&
+			!/Chat with us in Facebook Messenger/.test(value) &&
+			!/\((Terms & Conditions)\)/.test(value) &&
+			!/Click here /.test(value)
 		);
 	});
 

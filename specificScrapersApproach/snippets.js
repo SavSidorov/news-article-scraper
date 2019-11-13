@@ -17,7 +17,8 @@ module.exports = {
 		const snippetTags = [
 			"p",
 			'div[class="zn-body__paragraph speakable"]',
-			'div[class="zn-body__paragraph"]'
+			'div[class="zn-body__paragraph"]',
+			"li[class=gnt_ar_b_ul_li]"
 			// Add to this list to increase number of supported snippet tag variants
 		];
 
@@ -43,7 +44,7 @@ module.exports = {
 		}
 
 		if (!websiteMatch) {
-			console.log("Site not supported");
+			console.log("SITE NOT SUPPORTED");
 			snippets = [];
 		}
 
