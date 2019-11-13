@@ -10,15 +10,25 @@ module.exports = {
 			"yahoo",
 			"latimes",
 			"usatoday",
-			"abcnews"
+			"abcnews",
+			"alternet",
+			"apnews",
+			"theblaze",
+			"buzzfeednews",
+			"cbsnews",
+			"ctvnews",
+			"dailywire",
+			"forbes"
 			// Add to this list to increase number of supported urls
 		];
+		console.log("Number of supported websites: " + supportedUrls.length);
 
 		const snippetTags = [
 			"p",
 			'div[class="zn-body__paragraph speakable"]',
 			'div[class="zn-body__paragraph"]',
-			"li[class=gnt_ar_b_ul_li]"
+			"li[class=gnt_ar_b_ul_li]",
+			"blockquote"
 			// Add to this list to increase number of supported snippet tag variants
 		];
 

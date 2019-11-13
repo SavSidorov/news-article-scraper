@@ -127,6 +127,7 @@ function filterAndFormat(snippets) {
 			!/contributed to this article./.test(value) &&
 			!/contribute to this article./.test(value) &&
 			!/All rights reserved./.test(value) &&
+			!/All Rights Reserved./.test(value) &&
 			!/Download the/.test(value) &&
 			!(/Analysis by/.test(value) && value.length <= 100) &&
 			!(/Updated/.test(value) && /20/.test(value)) &&

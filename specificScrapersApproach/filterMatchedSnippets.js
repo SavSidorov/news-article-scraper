@@ -1,3 +1,11 @@
+/** TEMPLATE
+ newsorg : function(snippets){
+	//content goes here 
+
+	return snippets
+ }
+ */
+
 module.exports = {
 	abcnews: function(snippets) {
 		snippets = snippets.filter(function(value) {
@@ -11,6 +19,52 @@ module.exports = {
 				!/contribute to this article./.test(value) &&
 				!/ABC News'/.test(value) &&
 				!/Download the/.test(value)
+			);
+		});
+
+		return snippets;
+	},
+	alternet: function(snippets) {
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filter out short snippets
+				value.length >= 40 &&
+				//Filters out snippets w/ strings in question
+				!/All Rights Reserved./.test(value) &&
+				!/Mozilla\//.test(value) &&
+				!/AlterNet/.test(value) &&
+				!/Alternet/.test(value) &&
+				!/Progressive news is under siege/.test(value) &&
+				!/Your support goes a long way./.test(value)
+			);
+		});
+
+		return snippets;
+	},
+	apnews: function(snippets) {
+		////If "___" snippet encountered, delete all snippets after it
+		for (let i = 0; i < snippets.length; i++) {
+			if (snippets[i] == "___") {
+				snippets.splice(i, snippets.length - i);
+				break;
+			}
+		}
+
+		return snippets;
+	},
+	buzzfeednews: function(snippets) {
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filter out short snippets (larger than usual because of author snippets)
+				value.length >= 50 &&
+				//Filters out snippets w/ strings in question
+				!(/Posted on/.test(value) && /20/.test(value)) &&
+				!/@buzzfeed.com/.test(value) &&
+				!(/@/.test(value) && /20/.test(value)) &&
+				!(/is a/.test(value) && /based in/.test(value)) &&
+				!(/is an/.test(value) && /based in/.test(value)) &&
+				!(/is the/.test(value) && /based in/.test(value)) &&
+				!(/Last updated on/.test(value) && /20/.test(value))
 			);
 		});
 
@@ -86,6 +140,16 @@ module.exports = {
 				!/contribute to this report./.test(value) &&
 				!/contributed to this article./.test(value) &&
 				!/contribute to this article./.test(value)
+			);
+		});
+
+		return snippets;
+	},
+	theblaze: function(snippets) {
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filter out short snippets
+				value.length >= 40
 			);
 		});
 
