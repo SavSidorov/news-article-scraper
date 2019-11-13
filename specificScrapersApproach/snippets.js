@@ -18,7 +18,11 @@ module.exports = {
 			"cbsnews",
 			"ctvnews",
 			"dailywire",
-			"forbes"
+			"forbes",
+			"vox",
+			"vanityfair",
+			"wired",
+			"infowars"
 			// Add to this list to increase number of supported urls
 		];
 		console.log("Number of supported websites: " + supportedUrls.length);
@@ -47,7 +51,7 @@ module.exports = {
 			let substring = supportedUrls[i] + ".";
 
 			if (url.includes(substring)) {
-				console.log("Your website is: " + supportedUrls[i]);
+				console.log("Match found: " + supportedUrls[i]);
 				snippets = filterMatchedSnippets[supportedUrls[i]](snippets);
 				websiteMatch = true;
 			}
@@ -58,14 +62,23 @@ module.exports = {
 			snippets = [];
 		}
 
-		//Do some generic formatting on the snippets array
-		for (let i = 0; i < snippets.length; i++) {
-			snippets[i] = snippets[i].replace(/\n/g, "");
-			snippets[i] = snippets[i].replace(/\t/g, " ");
-			snippets[i] = snippets[i].replace(/\s+/g, " ");
-			snippets[i] = snippets[i].trim();
-		}
+		snippets = generalFormatting(snippets);
 
 		return snippets;
 	}
 };
+
+function generalFormatting(snippets) {
+	for (let i = 0; i < snippets.length; i++) {
+		snippets[i] = snippets[i].replace(/\n/g, "");
+		snippets[i] = snippets[i].replace(/\t/g, " ");
+		snippets[i] = snippets[i].replace(/\s+/g, " ");
+		snippets[i] = snippets[i].replace(/"/g, "“");
+		snippets[i] = snippets[i].trim();
+	}
+
+	//Remove any dublicates from snippets
+	snippets = [...new Set(snippets)];
+
+	return snippets;
+}

@@ -1,9 +1,9 @@
 /** TEMPLATE
- newsorg : function(snippets){
+ infowars: function(snippets){
 	//content goes here 
 
 	return snippets
- }
+ },
  */
 
 module.exports = {
@@ -56,7 +56,9 @@ module.exports = {
 		snippets = snippets.filter(function(value) {
 			return (
 				//Filter out short snippets (larger than usual because of author snippets)
-				value.length >= 50 &&
+				value.length >= 40 &&
+				//Filter out "By ...." snippets
+				!(value.length <= 150 && /By/.test(value)) &&
 				//Filters out snippets w/ strings in question
 				!(/Posted on/.test(value) && /20/.test(value)) &&
 				!/@buzzfeed.com/.test(value) &&
@@ -65,6 +67,34 @@ module.exports = {
 				!(/is an/.test(value) && /based in/.test(value)) &&
 				!(/is the/.test(value) && /based in/.test(value)) &&
 				!(/Last updated on/.test(value) && /20/.test(value))
+			);
+		});
+
+		return snippets;
+	},
+	cbsnews: function(snippets) {
+		//If "First published on ..." snippet encountered, delete all snippets after it
+		for (let i = 0; i < snippets.length; i++) {
+			if (/First published on/.test(snippets[i])) {
+				snippets.splice(i, snippets.length - i);
+				break;
+			}
+		}
+
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filter out short snippets
+				value.length >= 40 &&
+				//Filter out "By ...." snippets
+				!(value.length <= 150 && /By/.test(value)) &&
+				//Filter out snippets with no lower case letters
+				/[a-z]/.test(value) &&
+				//Filters out snippets w/ strings in question
+				!/All rights reserved./.test(value) &&
+				!/All Rights Reserved./.test(value) &&
+				!(/Updated/.test(value) && /20/.test(value)) &&
+				!(/CBS/.test(value) && /20/.test(value)) &&
+				!/Watch CBS News anytime/.test(value)
 			);
 		});
 
@@ -93,6 +123,51 @@ module.exports = {
 		for (let i = 0; i < snippets.length; i++) {
 			snippets[i] = snippets[i].replace(/\((CNN)\)/g, "");
 		}
+
+		return snippets;
+	},
+	ctvnews: function(snippets) {
+		//If "... was first published ____, 20xx." snippet encountered, delete all snippets after it
+		for (let i = 0; i < snippets.length; i++) {
+			if (/first published/.test(snippets[i]) && /20/.test(snippets[i])) {
+				snippets.splice(i, snippets.length - i);
+				break;
+			}
+		}
+
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filter out short snippets
+				value.length >= 40 &&
+				//Filters out snippets w/ strings in question
+				!/All rights reserved./.test(value) &&
+				!/All Rights Reserved./.test(value) &&
+				!/Live Now:/.test(value) &&
+				!/CTV News App/.test(value) &&
+				!/Terms & Conditions/.test(value) &&
+				!/CTVNews.ca/.test(value)
+			);
+		});
+
+		return snippets;
+	},
+	dailywire: function(snippets) {
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filter out empty snippets
+				value.length >= 5
+			);
+		});
+
+		return snippets;
+	},
+	forbes: function(snippets) {
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filter out short snippets
+				value.length >= 40
+			);
+		});
 
 		return snippets;
 	},
@@ -125,6 +200,21 @@ module.exports = {
 				!/Continue Reading Below/.test(value) &&
 				!/All rights reserved./.test(value) &&
 				!/\((Terms & Conditions)\)/.test(value)
+			);
+		});
+
+		return snippets;
+	},
+	infowars: function(snippets) {
+		//content goes here
+		//latest breaking news
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filter out short snippets (larger than usual because of author snippets)
+				value.length >= 40 &&
+				//Filters out snippets w/ strings in question
+				!/latest breaking news/.test(value) &&
+				!/Image Credits:/.test(value)
 			);
 		});
 
@@ -163,6 +253,63 @@ module.exports = {
 				//Filters out snippets w/ strings in question
 				!/:\w/.test(value) &&
 				!/Click here /.test(value)
+			);
+		});
+
+		return snippets;
+	},
+	vanityfair: function(snippets) {
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filter out short snippets
+				value.length >= 40 &&
+				//Filters out snippets w/ strings in question
+				!/Privacy Policy/.test(value) &&
+				!/twitter.com\//.test(value) &&
+				!(/Sign up/.test(value) && /newsletter/.test(value))
+			);
+		});
+
+		return snippets;
+	},
+	vox: function(snippets) {
+		//If "Terms of Use", "Privacy Policy" or "All Rights Reserved" snippets encountered, delete all snippets after it
+		for (let i = 0; i < snippets.length; i++) {
+			if (
+				/Terms of Use/.test(snippets[i]) ||
+				/Privacy Policy/.test(snippets[i]) ||
+				/All Rights Reserved/.test(snippets[i]) ||
+				/All rights reserved/.test(snippets[i])
+			) {
+				snippets.splice(i, snippets.length - i);
+				break;
+			}
+		}
+
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filter out short snippets
+				value.length >= 40 &&
+				//Filters out snippets w/ strings in question
+				!(/Sign up/.test(value) && /newsletter/.test(value)) &&
+				!(/Subscribe/.test(value) && /podcast/.test(value))
+			);
+		});
+
+		return snippets;
+	},
+	wired: function(snippets) {
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filter out short snippets
+				value.length >= 40 &&
+				//Filters out snippets w/ strings in question
+				!/WIRED is where tomorrow is realized/.test(value) &&
+				!/All rights reserved./.test(value) &&
+				!/Subscribe now./.test(value) &&
+				!/mail@wired.com/.test(value) &&
+				!/the retail links in our /.test(value) &&
+				!/Privacy Policy/.test(value)
 			);
 		});
 

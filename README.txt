@@ -91,6 +91,54 @@ URLS TESTED WITH SPECIFIC SCRAPER:
 "https://www.buzzfeednews.com/article/ellievhall/fbi-violent-hate-crimes-race-religion-latino";
 "https://www.buzzfeednews.com/article/ryanmac/zuckerberg-musically-tiktok-china-facebook";
 
+"https://www.cbsnews.com/live-news/trump-impeachment-house-intelligence-committee-hearings-2019-11-12-live-updates/";
+"https://www.cbsnews.com/news/former-mcdonalds-worker-alleging-harassment-says-co-worker-touched-underage-employees-2019-11-12/";
+"https://www.cbsnews.com/news/impeachment-hearings-house-democrats-announce-next-round-of-witnesses-set-to-testify-publicly-next-week/";
+"https://www.cbsnews.com/news/trump-impeachment-inquiry-steve-bannon-says-pelosis-strategy-is-actually-quite-brilliant/";
+"https://www.cbsnews.com/news/brianna-williams-arrested-taylor-rose-williams-missing-remains-found-alabama-search-for-florida-girl-today-2019-11-12/";
+
+"https://www.ctvnews.ca/health/report-predicts-drug-resistance-likely-to-kill-400-000-canadians-by-2050-1.4681190";
+"https://www.ctvnews.ca/world/trump-cancels-visit-to-u-s-cemetery-in-france-due-to-rain-1.4171846";
+"https://www.ctvnews.ca/canada/two-year-old-pronounced-dead-after-flight-makes-emergency-landing-in-st-john-s-1.4682056";
+"https://www.ctvnews.ca/politics/more-of-the-same-says-moe-on-lacklustre-meeting-with-trudeau-1.4681685";*
+"https://www.ctvnews.ca/canada/porch-thief-crushes-boy-s-charitable-candy-dream-until-the-community-steps-up-1.4681946";
+
+"https://www.dailywire.com/news/boston-university-student-group-triggered-by-ben-shapiro-speech-title-shapiro-responds";
+"https://www.dailywire.com/news/a-disgrace-patrick-stewart-tells-french-audience-hes-embarrassed-by-brexit";
+"https://www.dailywire.com/news/new-york-post-releases-cover-mocking-democrats-over-impeachment-charade";
+"https://www.dailywire.com/news/kanye-to-appear-at-nations-biggest-megachurch-sunday-bring-his-choir";
+"https://www.dailywire.com/news/hillary-continues-to-fuel-speculation-that-she-will-run-in-2020-with-new-remarks";
+
+"https://www.forbes.com/sites/williampesek/2019/11/13/why-wework-was-top-tick-of-global-economic-bubble/#6d030ab92235";
+"https://www.forbes.com/sites/bensin/2019/11/11/google-pixel-4-review-stubborn-hardware-decisions-hinder-otherwise-great-phone/#22e2f4142e3d";
+"https://www.forbes.com/sites/yuwahedrickwong/2019/11/11/corporate-america-is-paying-for-trumps-trade-war/#2613259f1532";
+"https://www.forbes.com/sites/sergeiklebnikov/2019/11/12/tesla-gigafactory-in-nevada-plagued-by-worker-injuries-report/#20e358a173ac";
+"https://www.forbes.com/sites/stephenpope/2019/11/13/germany-risks-rolling-into-a-recession-despite-a-shimmer-of-stronger-sentiment/#3ae3547e3a22";
+
+"https://www.vanityfair.com/news/2019/11/politico-founder-is-launching-a-tech-site";
+"https://www.vanityfair.com/news/2019/11/john-bolton-gives-trump-a-taste-of-the-impeachment-pain-to-come";
+"https://www.vanityfair.com/news/2019/11/trump-fire-inspector-general-michael-atkinson";
+"https://www.vanityfair.com/hollywood/2019/11/dave-filoni-george-lucas-star-wars";
+"https://www.vanityfair.com/hollywood/2019/10/john-legend-and-chrissy-teigen-cover-story";
+
+"https://www.vox.com/future-perfect/2019/8/5/20750259/facebook-ai-mind-reading-brain-computer-interface";
+"https://www.vox.com/2019/11/5/20914280/impeachment-trump-explained";
+"https://www.vox.com/policy-and-politics/2019/11/12/20961371/daca-supreme-court-dreamers-gorsuch-kavanaugh";
+"https://www.vox.com/2019/11/12/20960187/disney-plus-lineup-movies-tv-shows-launch-cult-classics";
+"https://www.vox.com/science-and-health/2019/11/12/20950235/ok-boomer-kids-these-days-psychology";
+
+"https://www.wired.com/story/how-to-watch-donald-trump-impeachment-hearings/";
+"https://www.wired.com/story/meet-the-immigrants-who-took-on-amazon/";
+"https://www.wired.com/story/disney-plus-power-launch/";
+"https://www.wired.com/review/apple-airpods-pro/";
+"https://www.wired.com/review/microsoft-surface-pro-x/";
+
+"https://www.infowars.com/if-impeachment-fails-will-the-elite-crash-the-economy-to-prevent-four-more-years-of-trump/";
+"https://www.infowars.com/watch-live-supreme-court-seeks-to-end-second-amendment-by-putting-gun-manufacturers-out-of-business/";
+"https://www.infowars.com/hong-kong-riot-police-fire-tear-gas-at-university-campus/";*
+"https://www.infowars.com/whistleblower-eric-ciaramella-hosted-2016-wh-meeting-ordering-ukraine-officials-to-drop-probe-into-hunter-biden/";*
+"https://www.infowars.com/bernie-sanders-aoc-will-play-very-important-role-in-white-house-if-im-elected/";
+
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -104,25 +152,15 @@ theguardian https://www.theguardian.com/
 bbc http://news.bbc.co.uk/
 huffpost https://www.huffpost.com/
 
-https://www.cbsnews.com/
-https://www.ctvnews.ca/
-https://www.dailywire.com/
-https://www.forbes.com/#43694a992254
 https://thefederalist.com/
-https://www.infowars.com/
 https://globalnews.ca/
 https://jacobinmag.com/
 https://www.politico.com/
 https://metro.co.uk/
 https://www.npr.org/
-https://slate.com/
 https://spectator.org/
 https://www.rt.com/
-https://www.theatlantic.com/
 https://www.thedailybeast.com/
 https://dailycaller.com/
 https://thehill.com/
 https://torontosun.com/
-https://www.vanityfair.com/
-https://www.wired.com/
-https://www.vox.com/

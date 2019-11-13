@@ -6,11 +6,7 @@ const date = require("./date.js");
 const snippets = require("./snippets.js");
 
 const url =
-	"https://www.buzzfeednews.com/article/skbaer/black-server-n-word-order-phoenix-breakfast-club";
-
-//FIXME: for offline use only with example cnn.html file:
-//const html = fs.readFileSync("cnn.html", "utf8");
-//parseData(html);
+	"https://www.infowars.com/bernie-sanders-aoc-will-play-very-important-role-in-white-house-if-im-elected/";
 
 axios.get(url).then(
 	response => {
