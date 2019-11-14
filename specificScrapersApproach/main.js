@@ -6,7 +6,7 @@ const date = require("./date.js");
 const snippets = require("./snippets.js");
 
 const url =
-	"https://torontosun.com/news/local-news/city-ready-to-tackle-winter-tory";
+	"https://www.latimes.com/california/story/2019-11-13/some-usc-student-deaths-appear-to-be-linked-to-drug-overdoses-tainted-narcotics-probed-sources-say";
 
 axios.get(url).then(
 	response => {

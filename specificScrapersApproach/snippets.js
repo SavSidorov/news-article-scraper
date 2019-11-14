@@ -48,11 +48,13 @@ module.exports = {
 			'div[class="l-article__part"]',
 			"li[class=gnt_ar_b_ul_li]",
 			"blockquote",
+			//"li", //FIXME: Lists are problematic at the moment.
 			"p"
 			// Add to this list to increase number of supported snippet tag variants
 		];
 
 		//Pull snippets from HTML using all snippet tags
+		//TODO: Get the ordering right --> regex?
 		let snippetsArrayLength = 0;
 		snippetTags.forEach(element => {
 			$(element).each(function(i) {
@@ -93,8 +95,36 @@ function generalFormatting(snippets) {
 		snippets[i] = snippets[i].trim();
 	}
 
-	//Remove any dublicates from snippets
-	snippets = [...new Set(snippets)];
+	//Filter out short snippets
+	snippets = snippets.filter(function(value) {
+		return value.length >= 40;
+	});
 
-	return snippets;
+	//Split snippets into paragraphs
+	var paragraphSnippets = [];
+	for (let i = 0; i < snippets.length; i++) {
+		//Split on '.', '!', '?'
+		splitSnippet = snippets[i].split(/\. |\? |! /);
+		paragraphSnippets = paragraphSnippets.concat(splitSnippet);
+	}
+
+	//Trim each sentence and combine short sentences
+	for (let i = 0; i < paragraphSnippets.length; i++) {
+		//Fixes acronyms and short sentences by joining to the next sentence
+		if (
+			paragraphSnippets[i].length < 50 &&
+			paragraphSnippets[i + 1] != undefined
+		) {
+			paragraphSnippets[i] =
+				paragraphSnippets[i] + ". " + paragraphSnippets[i + 1];
+			paragraphSnippets.splice(i + 1, 1);
+		}
+
+		paragraphSnippets[i] = paragraphSnippets[i].trim();
+	}
+
+	//Remove any dublicates from snippets
+	paragraphSnippets = [...new Set(paragraphSnippets)];
+
+	return paragraphSnippets;
 }

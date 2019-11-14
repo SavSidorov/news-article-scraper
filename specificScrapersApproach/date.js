@@ -23,7 +23,11 @@ module.exports = {
 			),
 			17: $('time[id="date-published"]').attr("datetime"),
 			18: $('time[itemprop="dateCreated"]').attr("datetime"),
-			19: $("time").text()
+			19: $("time").text(),
+			20: $('meta[name="dcterms.available"]').attr("content"),
+			21: $('meta[name="dcterms.dateAccepted"]').attr("content"),
+			22: $('meta[name="dcterms.submitted"]').attr("content"),
+			23: $('meta[name="dcterms.issued"]').attr("content")
 			// Add to this list to increase number of supported date tag variants
 		};
 

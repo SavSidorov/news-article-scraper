@@ -10,8 +10,6 @@ module.exports = {
 	abcnews: function(snippets) {
 		snippets = snippets.filter(function(value) {
 			return (
-				//Filter out short snippets
-				value.length >= 40 &&
 				//Filters out snippets w/ strings in question
 				!/contributed to this report./.test(value) &&
 				!/contribute to this report./.test(value) &&
@@ -27,8 +25,6 @@ module.exports = {
 	alternet: function(snippets) {
 		snippets = snippets.filter(function(value) {
 			return (
-				//Filter out short snippets
-				value.length >= 40 &&
 				//Filters out snippets w/ strings in question
 				!/All Rights Reserved./.test(value) &&
 				!/Mozilla\//.test(value) &&
@@ -55,8 +51,6 @@ module.exports = {
 	buzzfeednews: function(snippets) {
 		snippets = snippets.filter(function(value) {
 			return (
-				//Filter out short snippets
-				value.length >= 40 &&
 				//Filter out "By ...." snippets
 				!(value.length <= 150 && /By/.test(value)) &&
 				//Filters out snippets w/ strings in question
@@ -83,8 +77,6 @@ module.exports = {
 
 		snippets = snippets.filter(function(value) {
 			return (
-				//Filter out short snippets
-				value.length >= 40 &&
 				//Filter out "By ...." snippets
 				!(value.length <= 150 && /By/.test(value)) &&
 				//Filter out snippets with no lower case letters
@@ -103,8 +95,6 @@ module.exports = {
 	cnn: function(snippets) {
 		snippets = snippets.filter(function(value) {
 			return (
-				//Filter out short snippets
-				value.length >= 40 &&
 				//Filter out snippets with no lower case letters
 				/[a-z]/.test(value) &&
 				//Filters out snippets w/ strings in question
@@ -137,8 +127,6 @@ module.exports = {
 
 		snippets = snippets.filter(function(value) {
 			return (
-				//Filter out short snippets
-				value.length >= 40 &&
 				//Filters out snippets w/ strings in question
 				!/All rights reserved./.test(value) &&
 				!/All Rights Reserved./.test(value) &&
@@ -154,34 +142,17 @@ module.exports = {
 	dailycaller: function(snippets) {
 		snippets = snippets.filter(function(value) {
 			return (
-				//Filter out short snippets
-				value.length >= 40 &&
 				//Filters out snippets w/ strings in question
-				!/Getty Images/.test(value) &&
-				!/@dailycaller/.test(value)
+				!/Getty Images/.test(value) && !/@dailycaller/.test(value)
 			);
 		});
 
 		return snippets;
 	},
 	dailywire: function(snippets) {
-		snippets = snippets.filter(function(value) {
-			return (
-				//Filter out empty snippets
-				value.length >= 5
-			);
-		});
-
 		return snippets;
 	},
 	forbes: function(snippets) {
-		snippets = snippets.filter(function(value) {
-			return (
-				//Filter out short snippets
-				value.length >= 40
-			);
-		});
-
 		return snippets;
 	},
 	foxnews: function(snippets) {
@@ -221,8 +192,6 @@ module.exports = {
 	globalnews: function(snippets) {
 		snippets = snippets.filter(function(value) {
 			return (
-				//Filter out short snippets
-				value.length >= 40 &&
 				//Filter out snippets with no lower case letters
 				/[a-z]/.test(value) &&
 				//Filters out snippets w/ strings in question
@@ -238,8 +207,6 @@ module.exports = {
 	infowars: function(snippets) {
 		snippets = snippets.filter(function(value) {
 			return (
-				//Filter out short snippets
-				value.length >= 40 &&
 				//Filters out snippets w/ strings in question
 				!/latest breaking news/.test(value) &&
 				!/Image Credits:/.test(value)
@@ -251,8 +218,6 @@ module.exports = {
 	latimes: function(snippets) {
 		snippets = snippets.filter(function(value) {
 			return (
-				//Filter out short snippets
-				value.length >= 40 &&
 				//Filters out snippets w/ strings in question
 				!/contributed to this report./.test(value) &&
 				!/contribute to this report./.test(value) &&
@@ -268,11 +233,8 @@ module.exports = {
 		//@metro.co.uk
 		snippets = snippets.filter(function(value) {
 			return (
-				//Filter out short snippets
-				value.length >= 40 &&
 				//Filters out snippets w/ strings in question
-				!/@metro.co.uk/.test(value) &&
-				!/MORE:/.test(value)
+				!/@metro.co.uk/.test(value) && !/MORE:/.test(value)
 			);
 		});
 
@@ -281,8 +243,6 @@ module.exports = {
 	npr: function(snippets) {
 		snippets = snippets.filter(function(value) {
 			return (
-				//Filter out short snippets
-				value.length >= 40 &&
 				//Filters out snippets w/ strings in question
 				!/Getty Images/.test(value) &&
 				!/hide caption/.test(value) &&
@@ -310,8 +270,6 @@ module.exports = {
 
 		snippets = snippets.filter(function(value) {
 			return (
-				//Filter out short snippets
-				value.length >= 40 &&
 				//Filter out snippets with no lower case letters
 				/[a-z]/.test(value) &&
 				//Filter out "By ...." snippets
@@ -335,8 +293,6 @@ module.exports = {
 
 		snippets = snippets.filter(function(value) {
 			return (
-				//Filter out short snippets
-				value.length >= 40 &&
 				//Filters out snippets w/ strings in question
 				!/are solely those of the author/.test(value) &&
 				!/Share this story!/.test(value) &&
@@ -347,30 +303,14 @@ module.exports = {
 		return snippets;
 	},
 	spectator: function(snippets) {
-		snippets = snippets.filter(function(value) {
-			return (
-				//Filter out short snippets
-				value.length >= 40
-			);
-		});
-
 		return snippets;
 	},
 	techcrunch: function(snippets) {
-		snippets = snippets.filter(function(value) {
-			return (
-				//Filter out short snippets
-				value.length >= 40
-			);
-		});
-
 		return snippets;
 	},
 	techradar: function(snippets) {
 		snippets = snippets.filter(function(value) {
 			return (
-				//Filter out short snippets
-				value.length >= 40 &&
 				//Filters out snippets w/ strings in question
 				!/Reviews Guarantee/.test(value) &&
 				!/TechRadar is part of Future US Inc/.test(value) &&
@@ -388,20 +328,11 @@ module.exports = {
 		return snippets;
 	},
 	theblaze: function(snippets) {
-		snippets = snippets.filter(function(value) {
-			return (
-				//Filter out short snippets
-				value.length >= 40
-			);
-		});
-
 		return snippets;
 	},
 	thedailybeast: function(snippets) {
 		snippets = snippets.filter(function(value) {
 			return (
-				//Filter out short snippets
-				value.length >= 40 &&
 				//Filters out snippets w/ strings in question
 				!/Got a tip\?/.test(value)
 			);
@@ -418,20 +349,11 @@ module.exports = {
 			}
 		}
 
-		snippets = snippets.filter(function(value) {
-			return (
-				//Filter out short snippets
-				value.length >= 40
-			);
-		});
-
 		return snippets;
 	},
 	thehill: function(snippets) {
 		snippets = snippets.filter(function(value) {
 			return (
-				//Filter out short snippets
-				value.length >= 40 &&
 				//Filters out snippets w/ strings in question
 				!/The Hill 1625 K Street/.test(value) &&
 				!/©/.test(value) &&
@@ -444,8 +366,6 @@ module.exports = {
 	torontosun: function(snippets) {
 		snippets = snippets.filter(function(value) {
 			return (
-				//Filter out short snippets
-				value.length >= 40 &&
 				//Filters out snippets w/ strings in question
 				!(/Updated/.test(value) && /20/.test(value)) &&
 				!/Visit our FAQ page/.test(value)
@@ -457,8 +377,6 @@ module.exports = {
 	ubyssey: function(snippets) {
 		snippets = snippets.filter(function(value) {
 			return (
-				//Filter out short snippets
-				value.length >= 40 &&
 				//Filters out snippets w/ strings in question
 				!((/AM/.test(value) || /PM/.test(value)) && /-/.test(value))
 			);
@@ -469,11 +387,8 @@ module.exports = {
 	usatoday: function(snippets) {
 		snippets = snippets.filter(function(value) {
 			return (
-				//Filter out short snippets
-				value.length >= 40 &&
 				//Filters out snippets w/ strings in question
-				!/:\w/.test(value) &&
-				!/Click here /.test(value)
+				!/:\w/.test(value) && !/Click here /.test(value)
 			);
 		});
 
@@ -482,8 +397,6 @@ module.exports = {
 	vanityfair: function(snippets) {
 		snippets = snippets.filter(function(value) {
 			return (
-				//Filter out short snippets
-				value.length >= 40 &&
 				//Filters out snippets w/ strings in question
 				!/Privacy Policy/.test(value) &&
 				!/twitter.com\//.test(value) &&
@@ -509,8 +422,6 @@ module.exports = {
 
 		snippets = snippets.filter(function(value) {
 			return (
-				//Filter out short snippets
-				value.length >= 40 &&
 				//Filters out snippets w/ strings in question
 				!(/Sign up/.test(value) && /newsletter/.test(value)) &&
 				!(/Subscribe/.test(value) && /podcast/.test(value))
@@ -522,8 +433,6 @@ module.exports = {
 	wired: function(snippets) {
 		snippets = snippets.filter(function(value) {
 			return (
-				//Filter out short snippets
-				value.length >= 40 &&
 				//Filters out snippets w/ strings in question
 				!/WIRED is where tomorrow is realized/.test(value) &&
 				!/All rights reserved./.test(value) &&
@@ -544,13 +453,6 @@ module.exports = {
 				break;
 			}
 		}
-
-		snippets = snippets.filter(function(value) {
-			return (
-				//Filter out short snippets
-				value.length >= 40
-			);
-		});
 
 		return snippets;
 	}
