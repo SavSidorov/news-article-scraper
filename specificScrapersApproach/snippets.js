@@ -31,7 +31,12 @@ module.exports = {
 			"thedailybeast",
 			"ubyssey",
 			"politico",
-			"globalnews"
+			"globalnews",
+			"dailycaller",
+			"thehill",
+			"techcrunch",
+			"techradar",
+			"torontosun"
 			// Add to this list to increase number of supported urls
 		];
 		console.log("Number of supported websites: " + supportedUrls.length);

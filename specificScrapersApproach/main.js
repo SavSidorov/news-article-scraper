@@ -5,7 +5,8 @@ const cheerio = require("cheerio");
 const date = require("./date.js");
 const snippets = require("./snippets.js");
 
-const url = "";
+const url =
+	"https://torontosun.com/news/local-news/city-ready-to-tackle-winter-tory";
 
 axios.get(url).then(
 	response => {

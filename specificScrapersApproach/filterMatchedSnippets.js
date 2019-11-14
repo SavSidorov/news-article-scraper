@@ -1,9 +1,9 @@
 /** TEMPLATE
- globalnews: function(snippets){
-	//content goes here 
+torontosun: function(snippets) {
+		//content goes here
 
-	return snippets
- },
+		return snippets;
+	},
  */
 
 module.exports = {
@@ -146,6 +146,19 @@ module.exports = {
 				!/CTV News App/.test(value) &&
 				!/Terms & Conditions/.test(value) &&
 				!/CTVNews.ca/.test(value)
+			);
+		});
+
+		return snippets;
+	},
+	dailycaller: function(snippets) {
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filter out short snippets
+				value.length >= 40 &&
+				//Filters out snippets w/ strings in question
+				!/Getty Images/.test(value) &&
+				!/@dailycaller/.test(value)
 			);
 		});
 
@@ -343,6 +356,37 @@ module.exports = {
 
 		return snippets;
 	},
+	techcrunch: function(snippets) {
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filter out short snippets
+				value.length >= 40
+			);
+		});
+
+		return snippets;
+	},
+	techradar: function(snippets) {
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filter out short snippets
+				value.length >= 40 &&
+				//Filters out snippets w/ strings in question
+				!/Reviews Guarantee/.test(value) &&
+				!/TechRadar is part of Future US Inc/.test(value) &&
+				!/©/.test(value) &&
+				!/Get the best tech deals/.test(value) &&
+				!(
+					/By/.test(value) &&
+					/20/.test(value) &&
+					/:/.test(value) &&
+					/-/.test(value)
+				)
+			);
+		});
+
+		return snippets;
+	},
 	theblaze: function(snippets) {
 		snippets = snippets.filter(function(value) {
 			return (
@@ -359,7 +403,7 @@ module.exports = {
 				//Filter out short snippets
 				value.length >= 40 &&
 				//Filters out snippets w/ strings in question
-				!/Got a tip?/.test(value)
+				!/Got a tip\?/.test(value)
 			);
 		});
 
@@ -378,6 +422,33 @@ module.exports = {
 			return (
 				//Filter out short snippets
 				value.length >= 40
+			);
+		});
+
+		return snippets;
+	},
+	thehill: function(snippets) {
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filter out short snippets
+				value.length >= 40 &&
+				//Filters out snippets w/ strings in question
+				!/The Hill 1625 K Street/.test(value) &&
+				!/©/.test(value) &&
+				!(/Sign up/.test(value) && /newsletter/.test(value))
+			);
+		});
+
+		return snippets;
+	},
+	torontosun: function(snippets) {
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filter out short snippets
+				value.length >= 40 &&
+				//Filters out snippets w/ strings in question
+				!(/Updated/.test(value) && /20/.test(value)) &&
+				!/Visit our FAQ page/.test(value)
 			);
 		});
 

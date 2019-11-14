@@ -193,6 +193,38 @@ URLS TESTED WITH SPECIFIC SCRAPER:
 "https://globalnews.ca/news/6158220/comparing-major-video-streaming-services-canada/?utm_source=Other&utm_medium=MostPopular&utm_campaign=2014";
 "https://globalnews.ca/news/6066815/what-is-fatty-liver/?utm_source=Other&utm_medium=MostPopular&utm_campaign=2014";
 
+"https://dailycaller.com/2019/11/13/paul-gosars-tweets-epstein-didnt-kill-himself/";
+"https://dailycaller.com/2019/11/13/william-barr-fisa-report-imminent/";
+"https://dailycaller.com/2019/11/13/donald-trump-jrs-the-view-interview/"; X 
+"https://dailycaller.com/2019/11/07/starbucks-christmas-cups-merry-coffee/";
+"https://dailycaller.com/2019/11/08/disney-amazon-fire-tv/";
+"https://dailycaller.com/2019/11/13/rockets-israel-revenge-palestinian-death/";
+
+"https://thehill.com/policy/healthcare/470337-bipartisan-senators-press-fda-tobacco-chief-on-status-of-vaping-ban";*
+"https://thehill.com/changing-america/resilience/natural-disasters/470285-floods-in-venice-reach-highest-level-in-50";
+"https://thehill.com/changing-america/respect/inclusion/468425-jane-goodall-on-humans-chimpanzees-and-lessons-learned";
+"https://thehill.com/policy/technology/470289-facebook-says-it-took-action-against-millions-of-posts-over-hate-speech";
+"https://thehill.com/homenews/administration/470389-trump-holds-chummy-meeting-with-turkeys-erdogan";
+
+"https://techcrunch.com/2019/11/13/john-carmack-steps-down-at-oculus-to-pursue-ai-passion-project-before-i-get-too-old/";
+"https://techcrunch.com/2019/11/13/messaging-app-wire-confirms-8-2m-raise-responds-to-privacy-concerns-after-moving-holding-company-to-the-us/";*
+"https://techcrunch.com/2019/11/13/spacex-completes-key-crew-dragon-launch-system-static-test-fire/";
+"https://techcrunch.com/2019/11/13/apple-music-introduces-a-replay-a-playlist-of-your-top-songs-of-the-year/";
+"https://techcrunch.com/2019/11/13/github-launches-a-mobile-app-smarter-notifications-and-improved-code-search/";
+
+"https://www.techradar.com/reviews/macbook-pro-16-inch-2019";
+"https://www.techradar.com/news/disney-plus";
+"https://www.techradar.com/news/tracker-blocking-browser-brave-comes-out-of-beta";
+"https://www.techradar.com/reviews/amazon-echo-buds";
+"https://www.techradar.com/news/here-are-the-top-three-disney-plus-titles-were-watching-right-now";
+
+"https://torontosun.com/news/local-news/warmington-put-don-cherry-back-on-the-air-this-saturday";
+"https://torontosun.com/news/world/hunter-sementilli-murder-echoes-1944-film-noir-classic";
+"https://torontosun.com/news/world/isis-matchmaker-will-be-deported-to-france-and-jailed";
+"https://torontosun.com/opinion/columnists/bonokoski-bland-peter-mackay-throws-zingers-then-retreats";
+"https://torontosun.com/news/local-news/city-ready-to-tackle-winter-tory";
+
+
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 TODO:
@@ -204,10 +236,3 @@ http://www.wsj.com/
 https://www.theguardian.com/
 http://news.bbc.co.uk/
 https://www.huffpost.com/
-
-https://www.thedailybeast.com/
-https://dailycaller.com/
-https://thehill.com/
-https://torontosun.com/
-https://www.techradar.com/
-https://techcrunch.com/
