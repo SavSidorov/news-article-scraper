@@ -2,10 +2,10 @@ dates.txt
 example.js
 example.json
 example.py
-specificScrapersApproach/test.js
-specificScrapersApproach/test.html
-specificScrapersApproach/selectorTest.js
-specificScrapersApproach/dateTest.js
+project/test.js
+project/test.html
+project/selectorTest.js
+project/dateTest.js
 
 # Created by https://www.gitignore.io/api/node
 # Edit at https://www.gitignore.io/?templates=node
