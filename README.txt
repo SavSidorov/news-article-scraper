@@ -235,4 +235,5 @@ http://www.washingtonpost.com/
 http://www.wsj.com/
 https://www.theguardian.com/
 http://news.bbc.co.uk/
+cnet
 https://www.huffpost.com/

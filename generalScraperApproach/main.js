@@ -7,11 +7,11 @@ const cheerio = require("cheerio");
 const url =
 	"https://cnn.com/2019/09/21/europe/ukraine-trump-analysis-intl/index.html";
 
-/* FIXME: for offline use only with example cnn.html file:
+// FIXME: for offline use only with example cnn.html file:
 const html = fs.readFileSync("cnn.html", "utf8");
 parseData(html);
-*/
 
+/*
 axios.get(url).then(
 	response => {
 		if (response.status === 200) {
@@ -20,6 +20,7 @@ axios.get(url).then(
 	},
 	error => console.log(error)
 );
+*/
 
 function parseData(html) {
 	const $ = cheerio.load(html);

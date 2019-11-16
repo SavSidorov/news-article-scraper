@@ -6,7 +6,7 @@ const date = require("./date.js");
 const snippets = require("./snippets.js");
 
 const url =
-	"https://www.latimes.com/california/story/2019-11-13/some-usc-student-deaths-appear-to-be-linked-to-drug-overdoses-tainted-narcotics-probed-sources-say";
+	"https://techcrunch.com/2019/11/13/messaging-app-wire-confirms-8-2m-raise-responds-to-privacy-concerns-after-moving-holding-company-to-the-us/";
 
 axios.get(url).then(
 	response => {

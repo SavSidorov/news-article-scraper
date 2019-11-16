@@ -3,6 +3,8 @@ example.js
 example.json
 example.py
 specificScrapersApproach/test.js
+specificScrapersApproach/test.html
+specificScrapersApproach/selectorTest.js
 
 # Created by https://www.gitignore.io/api/node
 # Edit at https://www.gitignore.io/?templates=node

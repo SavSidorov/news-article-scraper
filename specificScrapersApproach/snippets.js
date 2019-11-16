@@ -3,6 +3,7 @@ const filterMatchedSnippets = require("./filterMatchedSnippets.js");
 module.exports = {
 	getSnippets: function($, url) {
 		let snippets = [];
+		var snippetTags = [];
 		const supportedUrls = [
 			"cnn",
 			"foxnews",
@@ -41,27 +42,28 @@ module.exports = {
 		];
 		console.log("Number of supported websites: " + supportedUrls.length);
 
-		const snippetTags = [
-			'div[class="zn-body__paragraph speakable"]',
-			'div[class="zn-body__paragraph"]',
-			'div[class="article__summary summary "]',
-			'div[class="l-article__part"]',
-			"li[class=gnt_ar_b_ul_li]",
-			"blockquote",
-			//"li", //FIXME: Lists are problematic at the moment.
-			"p"
-			// Add to this list to increase number of supported snippet tag variants
-		];
-
-		//Pull snippets from HTML using all snippet tags
-		//TODO: Get the ordering right --> regex?
-		let snippetsArrayLength = 0;
-		snippetTags.forEach(element => {
-			$(element).each(function(i) {
-				snippets[snippetsArrayLength + i] = $(this).text();
-			});
-			snippetsArrayLength = snippets.length;
+		//Pull snippets with these specified selectors
+		$(
+			'p, li, blockquote, div[class="zn-body__paragraph speakable"], div[class="zn-body__paragraph"], div[class="article__summary summary "], div[class="l-article__part"]'
+		).each(function(i) {
+			snippets[i] = $(this).text();
+			snippetTags[i] = $(this).get(0).tagName;
 		});
+
+		//Identify the index of the first and last paragraph
+		var firstIndex, lastIndex;
+		for (let i = 0; i <= snippetTags.length; i++) {
+			if (snippetTags[i] != "li" && firstIndex == undefined)
+				firstIndex = i;
+		}
+		for (let j = snippetTags.length - 1; j >= 0; j--) {
+			if (snippetTags[j] != "li" && lastIndex == undefined)
+				lastIndex = j - firstIndex;
+		}
+
+		//Trim out the junk 'li' tags that are unbounded by <p> tags
+		snippets.splice(0, firstIndex);
+		snippets.splice(lastIndex + 1, snippets.length - lastIndex);
 
 		//Filter snippets based on website match
 		let websiteMatch = false;
@@ -104,23 +106,19 @@ function generalFormatting(snippets) {
 	var paragraphSnippets = [];
 	for (let i = 0; i < snippets.length; i++) {
 		//Split on '.', '!', '?'
-		splitSnippet = snippets[i].split(/\. |\? |! /);
+		//Lookbehinds (?<=y)x take care of things like acronyms and middle names
+		splitSnippet = snippets[i].split(/(?<=(\w{2}|'\w))\. |\? |! /);
 		paragraphSnippets = paragraphSnippets.concat(splitSnippet);
 	}
 
-	//Trim each sentence and combine short sentences
+	//Trim sentences
 	for (let i = 0; i < paragraphSnippets.length; i++) {
-		//Fixes acronyms and short sentences by joining to the next sentence
-		if (
-			paragraphSnippets[i].length < 50 &&
-			paragraphSnippets[i + 1] != undefined
-		) {
-			paragraphSnippets[i] =
-				paragraphSnippets[i] + ". " + paragraphSnippets[i + 1];
-			paragraphSnippets.splice(i + 1, 1);
+		//Checks for 'undefined and fragments'
+		if (paragraphSnippets[i].length <= 2) {
+			paragraphSnippets.splice(i, 1);
+		} else {
+			paragraphSnippets[i] = paragraphSnippets[i].trim();
 		}
-
-		paragraphSnippets[i] = paragraphSnippets[i].trim();
 	}
 
 	//Remove any dublicates from snippets
