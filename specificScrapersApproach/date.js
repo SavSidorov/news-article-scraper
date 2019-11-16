@@ -1,3 +1,5 @@
+//TODO: Revamp the way dates are fetched to make it more scalable and generalizable
+
 module.exports = {
 	getDate: function($) {
 		let date = undefined;

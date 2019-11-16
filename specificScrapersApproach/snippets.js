@@ -37,7 +37,12 @@ module.exports = {
 			"thehill",
 			"techcrunch",
 			"techradar",
-			"torontosun"
+			"torontosun",
+			"nytimes",
+			"cnet",
+			"time",
+			"nbcnews",
+			"dailymail"
 			// Add to this list to increase number of supported urls
 		];
 		console.log("Number of supported websites: " + supportedUrls.length);
@@ -82,13 +87,13 @@ module.exports = {
 			snippets = [];
 		}
 
-		snippets = generalFormatting(snippets);
+		snippets = generalFormattingAndFiltering(snippets);
 
 		return snippets;
 	}
 };
 
-function generalFormatting(snippets) {
+function generalFormattingAndFiltering(snippets) {
 	for (let i = 0; i < snippets.length; i++) {
 		snippets[i] = snippets[i].replace(/\n/g, "");
 		snippets[i] = snippets[i].replace(/\t/g, " ");
@@ -97,24 +102,47 @@ function generalFormatting(snippets) {
 		snippets[i] = snippets[i].trim();
 	}
 
-	//Filter out short snippets
+	//Filter out short snippets, snippets with no lower case letters & do general filtering
 	snippets = snippets.filter(function(value) {
-		return value.length >= 40;
+		return (
+			value.length >= 40 &&
+			/[a-z]/.test(value) &&
+			!/contributed to this report./.test(value) &&
+			!/contribute to this report./.test(value) &&
+			!/contributed to this article./.test(value) &&
+			!/contribute to this article./.test(value) &&
+			!(/Updated/.test(value) && /20/.test(value))
+
+			//TODO: Deactivate the rules below if adding new website support;
+			//They are used for filtering all snippets after the encountered string in some specific scrapers
+
+			//!/©/.test(value) &&
+			//!/All Rights Reserved./.test(value) &&
+			//!/All rights reserved./.test(value) &&
+			//!/Terms & Conditions/.test(value) &&
+			//!/Terms of Use/.test(value) &&
+			//!/Terms of Service/.test(value) &&
+			//!/Privacy Policy/.test(value)
+		);
 	});
 
 	//Split snippets into paragraphs
 	var paragraphSnippets = [];
 	for (let i = 0; i < snippets.length; i++) {
 		//Split on '.', '!', '?'
-		//Lookbehinds (?<=y)x take care of things like acronyms and middle names
-		splitSnippet = snippets[i].split(/(?<=(\w{2}|'\w))\. |\? |! /);
+		//Split string only if the last word is 4 or more characters.
+		//Lookbehinds (?<=y)x take care of things like acronyms, middle names, month names (eg. Feb.)
+		splitSnippet = snippets[i].split(/(?<=(\w{4}|'\w|”|“))\. |\? |! /);
 		paragraphSnippets = paragraphSnippets.concat(splitSnippet);
 	}
 
 	//Trim sentences
 	for (let i = 0; i < paragraphSnippets.length; i++) {
 		//Checks for 'undefined and fragments'
-		if (paragraphSnippets[i].length <= 2) {
+		if (
+			paragraphSnippets[i] == undefined ||
+			paragraphSnippets[i].length <= 4
+		) {
 			paragraphSnippets.splice(i, 1);
 		} else {
 			paragraphSnippets[i] = paragraphSnippets[i].trim();

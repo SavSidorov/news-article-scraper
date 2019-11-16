@@ -2,29 +2,19 @@ HOW TO USE:
 
 This project scrapes the info (title, url, date, snippets) from news websites.
 
-Two approaches to the problem: general and specific. The general approach works for all websites, but not perfectly - you tend to get some junk in your snippets that's not part of the article itself. The specific approach works only for a select number of websites, but the snippets for each website are clean.
-
-In either case, run "node main.js" in order to use the program.
+Run "node main.js" in order to use the program.
 
 The URL you're scraping can be changed at the top of the main.js file, for both approaches.
 
-I included HTML from a sample CNN article for offline use. Uncomment the commented code at the top of main.js, and get rid of the axios request to use. 
+I included HTML from a sample CNN article for offline use. Uncomment the commented code at the top of main.js, and get rid of the axios request to use.
+
+SUPPORTED WEBSITES:
+[]
 
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-URLS TESTED WITH GENERAL SCRAPER:
-"https://www.foxnews.com/us/mormon-families-flee-mexico-arizona-cartel-massacre";
-"https://cnn.com/2019/09/21/europe/ukraine-trump-analysis-intl/index.html";
-"https://www.vox.com/future-perfect/2019/8/5/20750259/facebook-ai-mind-reading-brain-computer-interface";
-"https://www.vanityfair.com/style/2019/11/kanye-west-christian-genius-billionaire";
-"https://quillette.com/2019/09/21/why-has-kamala-harriss-campaign-fizzled/";
-"https://news.yahoo.com/trump-jr-booed-off-stage-094157937.html";
-"https://www.latimes.com/california/story/2019-11-10/chesa-boudin-is-new-district-attorney-in-san-francisco#nt=1col-7030col1-main";
-"https://www.usatoday.com/story/news/politics/2019/11/11/supreme-court-hears-daca-challenge-700000-dreamers/2533001001/";
-"https://abcnews.go.com/International/wireStory/hong-kong-protester-appears-shot-police-online-video-66900386?cid=clicksource_4380645_null_twopack_hed";
-
-URLS TESTED WITH SPECIFIC SCRAPER:
+URLS TESTED:
 "https://cnn.com/2019/09/21/europe/ukraine-trump-analysis-intl/index.html";
 "https://cnn.com/2019/11/11/asia/hong-kong-protests-dramatic-intl-hnk/index.html";
 "https://cnn.com/2019/11/12/europe/russia-putin-trump-impeachment-intl/index.html";
@@ -60,6 +50,7 @@ URLS TESTED WITH SPECIFIC SCRAPER:
 "https://www.latimes.com/politics/story/2019-11-12/supreme-court-arguments-about-dreamers-fate";
 "https://www.latimes.com/california/story/2019-11-12/koreatown-developer-lawsuit";
 "https://www.latimes.com/california/story/2019-11-12/rapper-who-collaborated-with-snoop";
+"https://www.latimes.com/california/story/2019-11-06/homeless-housing-board-and-care-homes-mental-illness";
 
 "https://www.usatoday.com/story/news/politics/2019/11/12/trump-anonymous-book-author-warning-civil-war/2575090001/";
 "https://www.usatoday.com/story/money/investing/2019/11/12/apple-iphone-subscription-ceo-tim-cook-revenue-earnings/40585857/";
@@ -224,16 +215,66 @@ URLS TESTED WITH SPECIFIC SCRAPER:
 "https://torontosun.com/opinion/columnists/bonokoski-bland-peter-mackay-throws-zingers-then-retreats";
 "https://torontosun.com/news/local-news/city-ready-to-tackle-winter-tory";
 
+"https://www.nytimes.com/2015/01/11/style/36-questions-that-lead-to-love.html";
+"https://www.nytimes.com/2019/11/15/arts/television/trump-tweet-hearing.html?action=click&module=Top%20Stories&pgtype=Homepage";*
+"https://www.nytimes.com/2019/11/15/us/politics/impeachment-hearing-yovanovitch.html?action=click&module=Top%20Stories&pgtype=Homepage";
+"https://www.nytimes.com/2019/11/15/us/trump-pardons.html?action=click&module=Top%20Stories&pgtype=Homepage";
+"https://www.nytimes.com/2019/11/15/us/politics/roger-stone-trial-guilty.html?action=click&module=Top%20Stories&pgtype=Homepage";
+
+"https://www.cnet.com/how-to/you-can-download-disney-plus-tv-shows-and-movies-to-watch-offline/";
+"https://www.cnet.com/news/hottest-christmas-toys-for-2019/";
+"https://www.cnet.com/videos/motorola-razr-is-futuristic-and-familiar/";
+"https://www.cnet.com/news/every-upcoming-marvel-movie-and-tv-show-in-mcu-phase-4-beyond/";
+"https://www.cnet.com/news/best-soundbars-for-2019/";
+
+"https://time.com/5730180/usc-student-deaths/";
+"https://time.com/5722795/rodney-reed-innocent-execution-protests/";
+"https://time.com/5728342/saugus-high-school-shooting/";
+"https://time.com/5730618/venice-high-tides-flooding-vulnerability/";
+"https://time.com/5730484/flight-attendants-boeing-737-max/";
+
+"https://www.nbcnews.com/politics/trump-impeachment-inquiry/holmes-gave-damning-testimony-trump-sondland-call-democratic-lawmakers-says-n1084071";
+"https://www.nbcnews.com/news/military/trump-dismisses-murder-charge-against-green-beret-pardons-army-officer-n1079941";
+"https://www.nbcnews.com/politics/donald-trump/devastating-day-trump-s-presidency-came-sharp-focus-congress-white-n1083991";
+"https://www.nbcnews.com/news/world/israel-says-it-probing-harm-civilians-deadly-gaza-airstrike-n1084151";
+"https://www.nbcnews.com/news/us-news/man-young-boy-shot-new-jersey-high-school-football-game-n1084146";
+
+"https://www.dailymail.co.uk/news/article-7692371/Andrew-says-felt-staying-billionaire-paedophile-Jeffrey-Epstein-right-thing-do.html";
+"https://www.dailymail.co.uk/news/article-7692333/Fire-alarms-didnt-sound-Bolton-University-flats-fire-flames-engulfed-six-storey-building.html";
+"https://www.dailymail.co.uk/news/article-7691931/Lotto-lout-Michael-Carroll-reveals-working-10-hour-coalman.html";
+"https://www.dailymail.co.uk/news/article-7691905/Jeremy-Corbyn-face-landslide-election-defeat-says-pollster.html";
+"https://www.dailymail.co.uk/news/article-7691149/Kate-Middletons-private-secretary-quits-post-two-years-working-future-queen.html";
+
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 TODO:
-http://www.nytimes.com/
-http://www.nbcnews.com/
-https://www.dailymail.co.uk/home/index.html
 http://www.washingtonpost.com/
 http://www.wsj.com/
 https://www.theguardian.com/
 http://news.bbc.co.uk/
-cnet
-https://www.huffpost.com/
+axios
+bloomberg
+breitbart
+businessinsider
+cbc
+csmonitor
+democracynow
+theglobeandmail
+macleans
+motherjones
+nationalreview
+nypost
+nytimes
+newsmax
+reuters
+slate
+theatlantic
+economist
+theintercept
+thenation
+newyorker
+thestar
+washingtontimes
+
+https://www.huffpost.com/ ***

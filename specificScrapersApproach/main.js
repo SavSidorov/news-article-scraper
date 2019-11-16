@@ -6,7 +6,11 @@ const date = require("./date.js");
 const snippets = require("./snippets.js");
 
 const url =
-	"https://techcrunch.com/2019/11/13/messaging-app-wire-confirms-8-2m-raise-responds-to-privacy-concerns-after-moving-holding-company-to-the-us/";
+	"https://www.dailymail.co.uk/news/article-7691149/Kate-Middletons-private-secretary-quits-post-two-years-working-future-queen.html";
+
+// FIXME: for offline use only with example cnn.html file:
+//const html = fs.readFileSync("cnn.html", "utf8");
+//parseData(html);
 
 axios.get(url).then(
 	response => {
