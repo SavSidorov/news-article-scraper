@@ -9,7 +9,50 @@ The URL you're scraping can be changed at the top of the main.js file, for both 
 I included HTML from a sample CNN article for offline use. Uncomment the commented code at the top of main.js, and get rid of the axios request to use.
 
 SUPPORTED WEBSITES:
-[]
+"cnn",
+"foxnews",
+"foxbusiness",
+"yahoo",
+"latimes",
+"usatoday",
+"abcnews",
+"alternet",
+"apnews",
+"theblaze",
+"buzzfeednews",
+"cbsnews",
+"ctvnews",
+"dailywire",
+"forbes",
+"vox",
+"vanityfair",
+"wired",
+"infowars",
+"thefederalist",
+"rt",
+"npr",
+"spectator",
+"metro",
+"thedailybeast",
+"ubyssey",
+"politico",
+"globalnews",
+"dailycaller",
+"thehill",
+"techcrunch",
+"techradar",
+"torontosun",
+"nytimes",
+"cnet",
+"time",
+"nbcnews",
+"dailymail",
+"bbc",
+"washingtonpost",
+"wsj",
+"theguardian",
+"axios",
+"bloomberg"
 
 
 
@@ -245,16 +288,41 @@ URLS TESTED:
 "https://www.dailymail.co.uk/news/article-7691905/Jeremy-Corbyn-face-landslide-election-defeat-says-pollster.html";
 "https://www.dailymail.co.uk/news/article-7691149/Kate-Middletons-private-secretary-quits-post-two-years-working-future-queen.html";
 
+"https://www.bbc.com/news/world-asia-50013478";*
+"https://www.bbc.com/news/world-middle-east-50444429";
+"https://www.bbc.com/news/world-us-canada-50428537";
+"https://www.bbc.com/news/world-us-canada-50441868";
+"https://www.bbc.com/news/world-us-canada-50266957";
+
+"https://www.washingtonpost.com/local/public-safety/roger-stone-jury-weighs-evidence-and-a-defense-move-to-make-case-about-mueller/2019/11/15/554fff5a-06ff-11ea-8292-c46ee8cb3dce_story.html";
+"https://www.washingtonpost.com/politics/trump-attacks-ambassador-even-as-she-describes-feeling-threatened-by-him/2019/11/15/c14eefaa-07bc-11ea-8ac0-0810ed197c7e_story.html";
+"https://www.washingtonpost.com/politics/trumps-doral-resort-was-a-last-minute-addition-in-search-for-g-7-site-newly-released-email-shows/2019/11/15/f39056a0-07fa-11ea-8ac0-0810ed197c7e_story.html";
+(need subscription to view more WaPo articles)
+
+"https://www.wsj.com/articles/struggling-farmers-are-key-to-trumps-hopes-in-minnesota-11573880460?mod=hp_lead_pos5";
+"https://www.wsj.com/articles/elizabeth-warrens-tax-plan-would-bring-rates-over-100-for-some-11573819200?mod=hp_lead_pos9";
+"https://www.wsj.com/articles/amazon-loss-stings-but-long-island-city-real-estate-shrugs-it-off-11573900200?mod=hp_lead_pos8";
+"https://www.wsj.com/articles/when-the-u-s-tried-to-control-hurricanes-11573880461?mod=hp_lead_pos10";
+"https://www.wsj.com/articles/disney-severs-ties-with-youtube-star-pewdiepie-after-anti-semitic-posts-1487034533";
+(Note: can't view full articles without subscription)
+
+"https://www.theguardian.com/world/2019/nov/16/three-more-altar-boys-claim-they-were-abused-by-priests-in-vatican";
+"https://www.theguardian.com/politics/2019/nov/15/jeremy-corbyn-to-launch-clause-v-workers-rights-document";
+"https://www.theguardian.com/music/2019/nov/16/friendship-intimate-on-all-levels-whitney-houston-robyn-crawford-addiction-fame-secrecy";
+"https://www.theguardian.com/books/2019/nov/16/hillary-and-chelsea-clinton-we-cannot-give-in-thats-how-they-win";
+"https://www.theguardian.com/lifeandstyle/2019/nov/16/george-takei-dream-dinner-party-star-trek-colleagues-except-one";
+
+"https://www.axios.com/beer-consumption-down-uncertain-future-a709e5dd-97aa-4185-99b0-7529e2b3499e.html";
+"https://www.axios.com/bloomberg-2020-decision-ad-campaign-671a5d60-dd6a-4fdf-9821-8be90a10b60c.html";
+"https://www.axios.com/david-holmes-confirms-trump-asked-sondland-ukraine-investigation-4c20f887-d79d-4bc4-8c73-d4fdc0dc91ce.html";
+"https://www.axios.com/trump-associates-convicted-mueller-investigations-206295a1-5abc-4573-be25-4da19d9adcc9.html";
+"https://www.axios.com/dow-closes-28000-first-time-ever-a69aeecb-a9c2-44f4-a432-c126d6aee273.html";
+
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 TODO:
-http://www.washingtonpost.com/
-http://www.wsj.com/
-https://www.theguardian.com/
-http://news.bbc.co.uk/
-axios
-bloomberg
+https://www.bloomberg.com/news
 breitbart
 businessinsider
 cbc

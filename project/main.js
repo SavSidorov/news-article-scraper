@@ -5,12 +5,12 @@ const cheerio = require("cheerio");
 const date = require("./date.js");
 const snippets = require("./snippets.js");
 
-const url =
-	"https://www.dailymail.co.uk/news/article-7691149/Kate-Middletons-private-secretary-quits-post-two-years-working-future-queen.html";
+// FOR OFFLINE USE WITH EXAMPLE cnn.html FILE:
+// const html = fs.readFileSync("cnn.html", "utf8");
+// parseData(html);
 
-// FIXME: for offline use only with example cnn.html file:
-//const html = fs.readFileSync("cnn.html", "utf8");
-//parseData(html);
+const url =
+	"https://www.bloomberg.com/news/articles/2019-11-16/pla-soldiers-join-effort-to-clean-up-areas-damaged-by-protests?srnd=premium-asia";
 
 axios.get(url).then(
 	response => {

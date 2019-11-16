@@ -1,5 +1,5 @@
 /** TEMPLATE
-dailymail: function(snippets) {
+bloomberg: function(snippets) {
 		//content goes here
 
 		return snippets;
@@ -39,6 +39,26 @@ module.exports = {
 				break;
 			}
 		}
+
+		return snippets;
+	},
+	axios: function(snippets) {
+		return snippets;
+	},
+	bbc: function(snippets) {
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filters out snippets w/ strings in question
+				!/These are external links/.test(value) &&
+				!(/:/.test(value) && /201/.test(value)) &&
+				!(/:/.test(value) && /202/.test(value))
+			);
+		});
+
+		return snippets;
+	},
+	bloomberg: function(snippets) {
+		//content goes here
 
 		return snippets;
 	},
@@ -352,6 +372,18 @@ module.exports = {
 
 		return snippets;
 	},
+	theguardian: function(snippets) {
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filters out snippets w/ strings in question
+				!/Last modified on/.test(value) &&
+				!/guardianbookshop/.test(value) &&
+				!/@theguardian.com/.test(value)
+			);
+		});
+
+		return snippets;
+	},
 	thehill: function(snippets) {
 		snippets = snippets.filter(function(value) {
 			return (
@@ -438,6 +470,19 @@ module.exports = {
 
 		return snippets;
 	},
+	washingtonpost: function(snippets) {
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filters out snippets w/ strings in question
+				!/Local newsletters: Local headlines/.test(value) &&
+				!/@postlocal/.test(value) &&
+				!/Free daily updates/.test(value) &&
+				!/5-Minute Fix/.test(value)
+			);
+		});
+
+		return snippets;
+	},
 	wired: function(snippets) {
 		snippets = snippets.filter(function(value) {
 			return (
@@ -446,6 +491,23 @@ module.exports = {
 				!/Subscribe now./.test(value) &&
 				!/mail@wired.com/.test(value) &&
 				!/the retail links in our /.test(value)
+			);
+		});
+
+		return snippets;
+	},
+	wsj: function(snippets) {
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filters out snippets w/ strings in question
+				!/https:/.test(value) &&
+				!/Opinion:/.test(value) &&
+				!/English EditionEnglish/.test(value) &&
+				!/WSJ Membership/.test(value) &&
+				!/Contact Us/.test(value) &&
+				!/Emails & Alerts/.test(value) &&
+				!/AdsAdvertise/.test(value) &&
+				!/ArchiveRegister/.test(value)
 			);
 		});
 

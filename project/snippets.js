@@ -42,7 +42,13 @@ module.exports = {
 			"cnet",
 			"time",
 			"nbcnews",
-			"dailymail"
+			"dailymail",
+			"bbc",
+			"washingtonpost",
+			"wsj",
+			"theguardian",
+			"axios",
+			"bloomberg"
 			// Add to this list to increase number of supported urls
 		];
 		console.log("Number of supported websites: " + supportedUrls.length);
