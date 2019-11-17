@@ -36,6 +36,7 @@ module.exports = {
 			"nationalreview",
 			"nbcnews",
 			"newsmax",
+			"newsweek",
 			"newyorker",
 			"npr",
 			"nypost",

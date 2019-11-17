@@ -435,6 +435,17 @@ module.exports = {
 
 		return snippets;
 	},
+	newsweek: function(snippets) {
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filters out snippets w/ strings in question
+				!/Daily Newsletter/.test(value) &&
+				!/Free access to 40\+/.test(value)
+			);
+		});
+
+		return snippets;
+	},
 	newyorker: function(snippets) {
 		for (let i = 0; i < snippets.length; i++) {
 			if (

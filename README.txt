@@ -8,7 +8,7 @@ The URL you're scraping can be changed at the top of the main.js file, for both 
 
 I included HTML from a sample CNN article for offline use. Uncomment the commented code at the top of main.js, and get rid of the axios request to use.
 
-SUPPORTED WEBSITES (64):
+SUPPORTED WEBSITES (65):
     "abcnews",
     "alternet",
     "apnews",
@@ -40,6 +40,7 @@ SUPPORTED WEBSITES (64):
     "nationalreview",
     "nbcnews",
     "newsmax",
+    "newsweek",
     "newyorker",
     "npr",
     "nypost",
@@ -463,9 +464,18 @@ URLS TESTED:
 "https://www.washingtontimes.com/news/2019/nov/16/bill-maher-says-second-civil-war-is-possible-learn/";
 "https://www.washingtontimes.com/news/2019/nov/14/russias-baleful-influence-being-felt-far-and-near/"
 
+"https://www.newsweek.com/eddie-rispone-trump-outsider-education-louisiana-governor-election-1472215";
+"https://www.newsweek.com/skip-obvious-alternatives-europes-most-over-touristed-cities-1471827";
+"https://www.newsweek.com/us-troops-die-remain-syria-bashar-al-assad-oil-donald-trump-russia-1472022";
+"https://www.newsweek.com/it-safe-travel-venice-amid-historic-flooding-city-1471531";
+"https://www.newsweek.com/beijing-pneumonic-plague-fears-1472192";
+
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 TODO:
 https://www.bloomberg.com/news ***
 https://www.huffpost.com/ ***
+https://www.projectveritas.com/ ***
+https://wikileaks.org/ ***
+https://www.msn.com/en-us/news ***
