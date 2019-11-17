@@ -1,5 +1,5 @@
 /** TEMPLATE
-nypost: function(snippets) {
+abcnews: function(snippets) {
 		//content goes here
 
 		return snippets;
@@ -61,8 +61,9 @@ module.exports = {
 		//If snippet encountered, delete all snippets after it
 		for (let i = 0; i < snippets.length; i++) {
 			if (
-				snippets[i] ==
-				"Please let us know if you're having issues with commenting."
+				/Please let us know if you're having issues with commenting/.test(
+					snippets[i]
+				)
 			) {
 				snippets.splice(i, snippets.length - i);
 				break;
@@ -270,6 +271,27 @@ module.exports = {
 	democracynow: function(snippets) {
 		return snippets;
 	},
+	economist: function(snippets) {
+		//If snippets encountered, delete all snippets after it
+		for (let i = 0; i < snippets.length; i++) {
+			if (
+				/<div/.test(snippets[i]) ||
+				(/Sign up/.test(snippets[i]) && /newsletter/.test(snippets[i]))
+			) {
+				snippets.splice(i, snippets.length - i);
+				break;
+			}
+		}
+
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filters out snippets w/ strings in question
+				!/Upgrade your inbox/.test(value)
+			);
+		});
+
+		return snippets;
+	},
 	forbes: function(snippets) {
 		return snippets;
 	},
@@ -391,6 +413,49 @@ module.exports = {
 
 		return snippets;
 	},
+	newsmax: function(snippets) {
+		//If snippet encountered, delete all snippets after it
+		for (let i = 0; i < snippets.length; i++) {
+			if (
+				/©/.test(snippets[i]) ||
+				/Newsmax Comment Policy/.test(snippets[i])
+			) {
+				snippets.splice(i, snippets.length - i);
+				break;
+			}
+		}
+
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filters out snippets w/ strings in question
+				!(/\|/.test(value) && /201/.test(value)) &&
+				!(/\|/.test(value) && /202/.test(value))
+			);
+		});
+
+		return snippets;
+	},
+	newyorker: function(snippets) {
+		for (let i = 0; i < snippets.length; i++) {
+			if (
+				(/Subscribe to/.test(snippets[i]) ||
+					/Sign up/.test(snippets[i])) &&
+				/newsletter/.test(snippets[i])
+			) {
+				snippets.splice(i, snippets.length - i);
+				break;
+			}
+		}
+
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filters out snippets w/ strings in question
+				!/newyorker.com/.test(value)
+			);
+		});
+
+		return snippets;
+	},
 	npr: function(snippets) {
 		snippets = snippets.filter(function(value) {
 			return (
@@ -458,6 +523,26 @@ module.exports = {
 
 		return snippets;
 	},
+	reuters: function(snippets) {
+		//If snippet encountered, delete all snippets after it
+		for (let i = 0; i < snippets.length; i++) {
+			if (/landscape-tablet-/.test(snippets[i])) {
+				snippets.splice(i, snippets.length - i);
+				break;
+			}
+		}
+
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filters out snippets w/ strings in question
+				!(/eporting by/.test(value) && /riting by/.test(value)) &&
+				!(/eporting by/.test(value) && /diting by/.test(value)) &&
+				!(/riting by/.test(value) && /diting by/.test(value))
+			);
+		});
+
+		return snippets;
+	},
 	rt: function(snippets) {
 		//If snippet encountered, delete all snippets after it
 		for (let i = 0; i < snippets.length; i++) {
@@ -473,6 +558,27 @@ module.exports = {
 				!/are solely those of the author/.test(value) &&
 				!/Share this story!/.test(value) &&
 				!/Share it with a friend!/.test(value)
+			);
+		});
+
+		return snippets;
+	},
+	slate: function(snippets) {
+		//If snippet encountered, delete all snippets after it
+		for (let i = 0; i < snippets.length; i++) {
+			if (
+				/©/.test(snippets[i]) ||
+				/Readers like you make our work possible/.test(snippets[i])
+			) {
+				snippets.splice(i, snippets.length - i);
+				break;
+			}
+		}
+
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filters out snippets w/ strings in question
+				!/Podcast Episode/.test(value)
 			);
 		});
 
@@ -499,6 +605,17 @@ module.exports = {
 				)
 			);
 		});
+
+		return snippets;
+	},
+	theatlantic: function(snippets) {
+		//If snippet encountered, delete all snippets after it
+		for (let i = 0; i < snippets.length; i++) {
+			if (/letters@theatlantic.com/.test(snippets[i])) {
+				snippets.splice(i, snippets.length - i);
+				break;
+			}
+		}
 
 		return snippets;
 	},
@@ -576,6 +693,59 @@ module.exports = {
 
 		return snippets;
 	},
+	theintercept: function(snippets) {
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filters out snippets w/ strings in question
+				!/The Intercept is a First Look Media Company/.test(value) &&
+				!/theintercept.com/.test(value)
+			);
+		});
+
+		return snippets;
+	},
+	thenation: function(snippets) {
+		//If snippet encountered, delete all snippets after it
+		for (let i = 0; i < snippets.length; i++) {
+			if (
+				/To submit a correction/.test(snippets[i]) ||
+				/Sign up for our free daily newsletter/.test(snippets[i])
+			) {
+				snippets.splice(i, snippets.length - i);
+				break;
+			}
+		}
+
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filters out snippets w/ strings in question
+				!/you consent to our use of cookies/.test(value) &&
+				!/receive occasional promotional offers/.test(value) &&
+				!/Subscribe now for/.test(value)
+			);
+		});
+
+		return snippets;
+	},
+	thestar: function(snippets) {
+		//If snippet encountered, delete all snippets after it
+		for (let i = 0; i < snippets.length; i++) {
+			if (/All rights reserved/.test(snippets[i])) {
+				snippets.splice(i, snippets.length - i);
+				break;
+			}
+		}
+
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filters out snippets w/ strings in question
+				!/Reprints.com/.test(value) &&
+				!/Copyright owned or licensed/.test(value)
+			);
+		});
+
+		return snippets;
+	},
 	time: function(snippets) {
 		snippets = snippets.filter(function(value) {
 			return (
@@ -611,6 +781,28 @@ module.exports = {
 			return (
 				//Filters out snippets w/ strings in question
 				!/:\w/.test(value) && !/Click here /.test(value)
+			);
+		});
+
+		return snippets;
+	},
+	vancouversun: function(snippets) {
+		//If snippet encountered, delete all snippets after it
+		for (let i = 0; i < snippets.length; i++) {
+			if (
+				/Postmedia is pleased to bring you/.test(snippets[i]) ||
+				/www.postmedia.com/.test(snippets[i])
+			) {
+				snippets.splice(i, snippets.length - i);
+				break;
+			}
+		}
+
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filters out snippets w/ strings in question
+				!/\/ Vancouver Sun/.test(value) &&
+				!(/Email/.test(value) && /@postmedia.com/.test(value))
 			);
 		});
 
@@ -659,6 +851,19 @@ module.exports = {
 				!/@postlocal/.test(value) &&
 				!/Free daily updates/.test(value) &&
 				!/5-Minute Fix/.test(value)
+			);
+		});
+
+		return snippets;
+	},
+	washingtontimes: function(snippets) {
+		//Splice out list of washingtontimes website categories
+		snippets.splice(0, 100);
+
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filters out snippets w/ strings in question
+				!/TOP STORIES/.test(value)
 			);
 		});
 

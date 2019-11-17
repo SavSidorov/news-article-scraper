@@ -8,7 +8,7 @@ The URL you're scraping can be changed at the top of the main.js file, for both 
 
 I included HTML from a sample CNN article for offline use. Uncomment the commented code at the top of main.js, and get rid of the axios request to use.
 
-SUPPORTED WEBSITES:
+SUPPORTED WEBSITES (64):
     "abcnews",
     "alternet",
     "apnews",
@@ -27,6 +27,7 @@ SUPPORTED WEBSITES:
     "dailymail",
     "dailywire",
     "democracynow",
+    "economist",
     "forbes",
     "foxbusiness",
     "foxnews",
@@ -38,27 +39,37 @@ SUPPORTED WEBSITES:
     "motherjones",
     "nationalreview",
     "nbcnews",
+    "newsmax",
+    "newyorker",
     "npr",
     "nypost",
     "nytimes",
     "politico",
+    "reuters",
     "rt",
+    "slate",
     "spectator",
     "techcrunch",
     "techradar",
+    "theatlantic",
     "theblaze",
     "thedailybeast",
     "thefederalist",
     "theglobeandmail",
     "theguardian",
     "thehill",
+    "theintercept",
+    "thenation",
+    "thestar",
     "time",
     "torontosun",
     "ubyssey",
     "usatoday",
+    "vancouversun",
     "vanityfair",
     "vox",
     "washingtonpost",
+    "washingtontimes",
     "wired",
     "wsj",
     "yahoo"
@@ -313,7 +324,7 @@ URLS TESTED:
 "https://www.wsj.com/articles/amazon-loss-stings-but-long-island-city-real-estate-shrugs-it-off-11573900200?mod=hp_lead_pos8";
 "https://www.wsj.com/articles/when-the-u-s-tried-to-control-hurricanes-11573880461?mod=hp_lead_pos10";
 "https://www.wsj.com/articles/disney-severs-ties-with-youtube-star-pewdiepie-after-anti-semitic-posts-1487034533";
-(Note: can't view full articles without subscription)
+(Note: need subscription to view full articles)
 
 "https://www.theguardian.com/world/2019/nov/16/three-more-altar-boys-claim-they-were-abused-by-priests-in-vatican";
 "https://www.theguardian.com/politics/2019/nov/15/jeremy-corbyn-to-launch-clause-v-workers-rights-document";
@@ -386,20 +397,75 @@ URLS TESTED:
 "https://nypost.com/2019/11/16/al-sharpton-gets-1m-in-pay-from-his-own-charity/";*
 "https://nypost.com/2019/11/16/el-chapos-wife-emma-coronel-aispuro-makes-classy-debut-on-on-vh1s-cartel-crew/";*
 
+"https://www.newsmax.com/politics/trump-impeachment/2019/11/16/id/942001/";
+"https://www.newsmax.com/headline/trump-impeachment/2019/11/16/id/941998/";
+"https://www.newsmax.com/newsfront/trumpmilitarypardons/2019/11/15/id/941946/";
+"https://www.newsmax.com/newsfront/election-2020-obama/2019/11/15/id/941957/";
+"https://www.newsmax.com/newsfront/peterking-newyork-republican-politicization/2019/11/16/id/941997/";
+
+"https://www.reuters.com/article/us-usa-trump-impeachment/pence-aide-said-trumps-ukraine-phone-call-was-unusual-and-inappropriate-idUSKBN1XQ0H4";
+"https://www.reuters.com/article/us-hongkong-protests/hong-kong-protesters-hurl-petrol-bombs-in-fresh-university-clashes-idUSKBN1XQ0OJ";
+"https://www.reuters.com/article/us-usa-trade-china/china-u-s-had-constructive-phone-call-on-trade-xinhua-idUSKBN1XR01N";
+"https://www.reuters.com/article/us-sri-lanka-election/sri-lankas-rajapaksa-in-the-lead-in-presidential-election-idUSKBN1XR023?il=0";
+"https://www.reuters.com/article/us-usa-election-iowa/buttigieg-surges-ahead-of-democratic-rivals-in-iowa-poll-idUSKBN1XR01B";
+
+"https://slate.com/news-and-politics/2019/11/marie-yovanovitch-trump-impeachment-testimony.html";
+"https://slate.com/news-and-politics/2019/11/trump-impeachment-chances-hearings-roger-stone-conviction.html";
+"https://slate.com/business/2019/11/matthew-doherty-ousted-us-interagency-council-on-homelessness-trump-administration.html";
+"https://slate.com/news-and-politics/2019/11/lisa-kennedy-trump-big-dumb-baby-yovanovitch-attack.html";
+"https://slate.com/news-and-politics/2019/11/obama-warns-democratic-presidential-candidates-not-to-move-too-far-left.html";
+
+"https://www.theatlantic.com/health/archive/2019/11/kings-speech/602050/";
+"https://www.theatlantic.com/politics/archive/2019/11/marie-yovanovitch/602092/";
+"https://www.theatlantic.com/international/archive/2019/11/jeremy-corbyn-like-donald-trump-not-boris-johnson/601957/";
+"https://www.theatlantic.com/entertainment/archive/2019/11/frozen-ii-review/601906/";
+"https://www.theatlantic.com/ideas/archive/2019/11/congressional-review-act-court/601924/";
+
+"https://www.economist.com/leaders/2019/11/16/voters-could-make-the-world-twice-as-rich-why-dont-they";
+"https://www.economist.com/finance-and-economics/2019/11/14/the-case-for-a-falling-dollar";
+"https://www.economist.com/graphic-detail/2019/11/15/the-teflon-president";
+"https://www.economist.com/finance-and-economics/2019/11/14/tighter-production-targets-have-failed-to-lift-the-price-of-oil";
+"https://www.economist.com/leaders/2019/11/16/was-there-a-coup-in-bolivia";
+
+"https://theintercept.com/2019/11/16/puerto-rico-murders-femicide-police/";
+"https://theintercept.com/2019/11/14/peter-handke-nobel-prize-bosnian-genocide-conspiracy/";
+"https://theintercept.com/2019/11/15/maryland-state-senate-progressive/";
+"https://theintercept.com/2019/11/13/trump-erdogan-turkey-f-35/";
+"https://theintercept.com/2019/05/14/turkey-second-drone-age/";
+
+"https://vancouversun.com/opinion/columnists/douglas-todd-ottawa-rejecting-more-and-more-study-visa-applicants";
+"https://vancouversun.com/news/local-news/small-is-beautiful-farm-workshop-planned-in-langley";
+"https://vancouversun.com/news/local-news/baldwin-brothers-shot-to-death-weeks-apart";
+"https://vancouversun.com/business/money-news/u-s-companies-doing-business-with-huawei-to-get-another-extension-sources/wcm/5af8d69b-71c1-47b7-8214-53c999add713";
+"https://vancouversun.com/news/canada/maxime-bernier-warns-disgruntled-albertans-that-threatening-separation-actually-left-quebec-worse-off/wcm/457f9f2b-d7be-4a92-a8d1-82ec70b64a80";
+
+"https://www.thenation.com/article/lopez-inheritance-forster-broadway/";
+"https://www.thenation.com/article/attempted-bribery-yovanovitch-pelosi/";
+"https://www.thenation.com/article/trump-alice-wonderland/";
+"https://www.thenation.com/article/chicago-ctu-strike-win/";
+"https://www.thenation.com/article/race-riot-chicago/";
+
+"https://www.newyorker.com/news/our-columnists/a-bad-week-for-trump-got-worse-with-a-new-impeachment-witness";
+"https://www.newyorker.com/news/postscript/noel-ignatievs-long-fight-against-whiteness";
+"https://www.newyorker.com/news/daily-comment/roger-stones-crimes";
+"https://www.newyorker.com/magazine/2019/11/18/the-trip";
+"https://www.newyorker.com/business/currency/weworks-downfall-and-a-reckoning-for-softbank";
+
+"https://www.thestar.com/sports/skating/opinion/2019/11/16/tessa-virtue-steps-off-the-ice-and-into-kinky-boots-among-other-worthwhile-endeavours.html";
+"https://www.thestar.com/news/gta/2019/11/16/north-york-residents-face-uncertain-future-after-highrise-blaze-leaves-one-dead-hundreds-displaced.html";
+"https://www.thestar.com/news/gta/2019/11/15/icona-condo-buyers-take-developer-to-court-over-cancelled-project.html";
+"https://www.thestar.com/news/gta/2019/11/16/pedestrian-dead-after-being-struck-by-go-train-near-danforth-station.html";
+"https://www.thestar.com/vancouver/2019/10/30/racist-rants-are-going-viral-but-they-arent-illegal-a-vancouver-lawyer-says-they-should-be.html";
+
+"https://www.washingtontimes.com/news/2019/nov/12/sudden-expansion-of-2020-democratic-presidential-f/";
+"https://www.washingtontimes.com/news/2019/nov/16/colin-kaepernick-throws-nfl-loop-moving-workout/";
+"https://www.washingtontimes.com/news/2019/nov/16/joe-biden-trolls-trump-after-roger-stone-verdict-t/";
+"https://www.washingtontimes.com/news/2019/nov/16/bill-maher-says-second-civil-war-is-possible-learn/";
+"https://www.washingtontimes.com/news/2019/nov/14/russias-baleful-influence-being-felt-far-and-near/"
+
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 TODO:
-newsmax
-reuters
-slate
-theatlantic
-economist
-theintercept
-thenation
-newyorker
-thestar
-washingtontimes
-
 https://www.bloomberg.com/news ***
 https://www.huffpost.com/ ***

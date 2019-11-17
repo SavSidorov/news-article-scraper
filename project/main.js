@@ -10,7 +10,7 @@ const snippets = require("./snippets.js");
 // parseData(html);
 
 const url =
-	"https://nypost.com/2019/11/16/el-chapos-wife-emma-coronel-aispuro-makes-classy-debut-on-on-vh1s-cartel-crew/";
+	"https://cnn.com/2019/09/21/europe/ukraine-trump-analysis-intl/index.html";
 
 axios.get(url).then(
 	response => {

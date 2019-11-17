@@ -5,59 +5,70 @@ module.exports = {
 		let snippets = [];
 		var snippetTags = [];
 		const supportedUrls = [
-			"cnn",
-			"foxnews",
-			"foxbusiness",
-			"yahoo",
-			"latimes",
-			"usatoday",
 			"abcnews",
 			"alternet",
 			"apnews",
-			"theblaze",
-			"buzzfeednews",
-			"cbsnews",
-			"ctvnews",
-			"dailywire",
-			"forbes",
-			"vox",
-			"vanityfair",
-			"wired",
-			"infowars",
-			"thefederalist",
-			"rt",
-			"npr",
-			"spectator",
-			"metro",
-			"thedailybeast",
-			"ubyssey",
-			"politico",
-			"globalnews",
-			"dailycaller",
-			"thehill",
-			"techcrunch",
-			"techradar",
-			"torontosun",
-			"nytimes",
-			"cnet",
-			"time",
-			"nbcnews",
-			"dailymail",
-			"bbc",
-			"washingtonpost",
-			"wsj",
-			"theguardian",
 			"axios",
+			"bbc",
 			"breitbart",
 			"businessinsider",
+			"buzzfeednews",
 			"cbc",
+			"cbsnews",
+			"cnet",
+			"cnn",
 			"csmonitor",
+			"ctvnews",
+			"dailycaller",
+			"dailymail",
+			"dailywire",
 			"democracynow",
-			"theglobeandmail",
+			"economist",
+			"forbes",
+			"foxbusiness",
+			"foxnews",
+			"globalnews",
+			"infowars",
+			"latimes",
 			"macleans",
+			"metro",
 			"motherjones",
 			"nationalreview",
-			"nypost"
+			"nbcnews",
+			"newsmax",
+			"newyorker",
+			"npr",
+			"nypost",
+			"nytimes",
+			"politico",
+			"reuters",
+			"rt",
+			"slate",
+			"spectator",
+			"techcrunch",
+			"techradar",
+			"theatlantic",
+			"theblaze",
+			"thedailybeast",
+			"thefederalist",
+			"theglobeandmail",
+			"theguardian",
+			"thehill",
+			"theintercept",
+			"thenation",
+			"thestar",
+			"time",
+			"torontosun",
+			"ubyssey",
+			"usatoday",
+			"vancouversun",
+			"vanityfair",
+			"vox",
+			"washingtonpost",
+			"washingtontimes",
+			"wired",
+			"wsj",
+			"yahoo"
 			// Add to this list to increase number of supported urls
 		];
 		console.log("Number of supported websites: " + supportedUrls.length);
@@ -127,18 +138,16 @@ function generalFormattingAndFiltering(snippets) {
 			!/contributed to this article./.test(value) &&
 			!/contribute to this article./.test(value) &&
 			!(/Updated/.test(value) && /20/.test(value)) &&
-			!(/—/.test(value) && /@/.test(value) && /20/.test(value))
-
-			//TODO: Deactivate the rules below if adding new website support;
+			!(/—/.test(value) && /@/.test(value) && /20/.test(value)) &&
+			//Note: Deactivate the rules below if adding new website support;
 			//They are used for filtering all snippets after the encountered string in some specific scrapers
-
-			//!/©/.test(value) &&
-			//!/All Rights Reserved./.test(value) &&
-			//!/All rights reserved./.test(value) &&
-			//!/Terms & Conditions/.test(value) &&
-			//!/Terms of Use/.test(value) &&
-			//!/Terms of Service/.test(value) &&
-			//!/Privacy Policy/.test(value)
+			!/©/.test(value) &&
+			!/All Rights Reserved./.test(value) &&
+			!/All rights reserved./.test(value) &&
+			!/Terms & Conditions/.test(value) &&
+			!/Terms of Use/.test(value) &&
+			!/Terms of Service/.test(value) &&
+			!/Privacy Policy/.test(value)
 		);
 	});
 
