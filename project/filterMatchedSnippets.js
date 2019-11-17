@@ -1,5 +1,5 @@
 /** TEMPLATE
-bloomberg: function(snippets) {
+nypost: function(snippets) {
 		//content goes here
 
 		return snippets;
@@ -32,7 +32,7 @@ module.exports = {
 		return snippets;
 	},
 	apnews: function(snippets) {
-		////If "___" snippet encountered, delete all snippets after it
+		//If "___" snippet encountered, delete all snippets after it
 		for (let i = 0; i < snippets.length; i++) {
 			if (snippets[i] == "___") {
 				snippets.splice(i, snippets.length - i);
@@ -57,8 +57,36 @@ module.exports = {
 
 		return snippets;
 	},
-	bloomberg: function(snippets) {
-		//content goes here
+	breitbart: function(snippets) {
+		//If snippet encountered, delete all snippets after it
+		for (let i = 0; i < snippets.length; i++) {
+			if (
+				snippets[i] ==
+				"Please let us know if you're having issues with commenting."
+			) {
+				snippets.splice(i, snippets.length - i);
+				break;
+			}
+		}
+
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filters out snippets w/ strings in question
+				!(/Follow/.test(value) && /on Twitter/.test(value))
+			);
+		});
+
+		return snippets;
+	},
+	businessinsider: function(snippets) {
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filters out snippets w/ strings in question
+				!/@businessinsider.com/.test(value) &&
+				!(/contributed/.test(value) && /to this post/.test(value)) &&
+				!(/contributed/.test(value) && /for this piece/.test(value))
+			);
+		});
 
 		return snippets;
 	},
@@ -75,6 +103,25 @@ module.exports = {
 				!(/is an/.test(value) && /based in/.test(value)) &&
 				!(/is the/.test(value) && /based in/.test(value)) &&
 				!(/Last updated on/.test(value) && /20/.test(value))
+			);
+		});
+
+		return snippets;
+	},
+	cbc: function(snippets) {
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filters out snippets w/ strings in question
+				!/CBC's Opinion section/.test(value) &&
+				!/CBC\/Radio-Canada/.test(value) &&
+				!/CBC has the right to/.test(value) &&
+				!/CBC does not endorse/.test(value) &&
+				!/Submission Guidelines/.test(value) &&
+				!/Comments are welcome while open/.test(value) &&
+				!/We reserve the right to close comments/.test(value) &&
+				!/Audience Relations/.test(value) &&
+				!/Closed Captioning/.test(value) &&
+				!/a priority for CBC/.test(value)
 			);
 		});
 
@@ -128,6 +175,34 @@ module.exports = {
 		for (let i = 0; i < snippets.length; i++) {
 			snippets[i] = snippets[i].replace(/\((CNN)\)/g, "");
 		}
+
+		return snippets;
+	},
+	csmonitor: function(snippets) {
+		//If snippet encountered, delete all snippets after it
+		for (let i = 0; i < snippets.length; i++) {
+			if (/We want to hear from you/.test(snippets[i])) {
+				snippets.splice(i, snippets.length - i);
+				break;
+			}
+		}
+
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filters out snippets w/ strings in question
+				!(/By/.test(value) && /@/.test(value)) &&
+				!/One month free trial/.test(value) &&
+				!/Monitor's/.test(value) &&
+				!/Stay informed about the latest/.test(value) &&
+				!/Monitor views/.test(value) &&
+				!/Latest book reviews, author interviews, and reading trends/.test(
+					value
+				) &&
+				!/Christian Science articles/.test(value) &&
+				!/Hear about special editorial projects/.test(value) &&
+				!/A weekly update on major political events/.test(value)
+			);
+		});
 
 		return snippets;
 	},
@@ -192,6 +267,9 @@ module.exports = {
 	dailywire: function(snippets) {
 		return snippets;
 	},
+	democracynow: function(snippets) {
+		return snippets;
+	},
 	forbes: function(snippets) {
 		return snippets;
 	},
@@ -235,11 +313,64 @@ module.exports = {
 	latimes: function(snippets) {
 		return snippets;
 	},
+	macleans: function(snippets) {
+		//If snippet encountered, delete all snippets after it
+		for (let i = 0; i < snippets.length; i++) {
+			if (/an email with instructions/.test(snippets[i])) {
+				snippets.splice(i, snippets.length - i);
+				break;
+			}
+		}
+
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filters out snippets w/ strings in question
+				!(/Authors/.test(value) && /Maclean's/.test(value)) &&
+				!(/newsletter/.test(value) && /Sign-up/.test(value)) &&
+				!/Getty Images/.test(value) &&
+				!/MORE:/.test(value)
+			);
+		});
+
+		return snippets;
+	},
 	metro: function(snippets) {
 		snippets = snippets.filter(function(value) {
 			return (
 				//Filters out snippets w/ strings in question
 				!/@metro.co.uk/.test(value) && !/MORE:/.test(value)
+			);
+		});
+
+		return snippets;
+	},
+	motherjones: function(snippets) {
+		//If snippet encountered, delete all snippets after it
+		for (let i = 0; i < snippets.length; i++) {
+			if (/Mother Jones was founded as a nonprofit/.test(snippets[i])) {
+				snippets.splice(i, snippets.length - i);
+				break;
+			}
+		}
+
+		return snippets;
+	},
+	nationalreview: function(snippets) {
+		//If snippet encountered, delete all snippets after it
+		for (let i = 0; i < snippets.length; i++) {
+			if (
+				/Get our conservative analysis/.test(snippets[i]) ||
+				/delivered straight to your inbox/.test(snippets[i])
+			) {
+				snippets.splice(i, snippets.length - i);
+				break;
+			}
+		}
+
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filters out snippets w/ strings in question
+				!/This article originally appeared in/.test(value)
 			);
 		});
 
@@ -275,6 +406,29 @@ module.exports = {
 						/is the/.test(value)) &&
 					/NPR/.test(value)
 				)
+			);
+		});
+
+		return snippets;
+	},
+	nypost: function(snippets) {
+		//If snippet encountered, delete all snippets after it
+		for (let i = 0; i < snippets.length; i++) {
+			if (
+				/Sections & Features/.test(snippets[i]) ||
+				/Manage Subscription/.test(snippets[i])
+			) {
+				snippets.splice(i, snippets.length - i);
+				break;
+			}
+		}
+
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filters out snippets w/ strings in question
+				!/Thanks for contacting us/.test(value) &&
+				!/Sub Menu 1/.test(value) &&
+				!/Apple Podcasts/.test(value)
 			);
 		});
 
@@ -369,6 +523,33 @@ module.exports = {
 				break;
 			}
 		}
+
+		return snippets;
+	},
+	theglobeandmail: function(snippets) {
+		//If snippet encountered, delete all snippets after it
+		for (let i = 0; i < snippets.length; i++) {
+			if (/Welcome to The Globe and Mail/.test(snippets[i])) {
+				snippets.splice(i, snippets.length - i);
+				break;
+			}
+		}
+
+		snippets = snippets.filter(function(value) {
+			return (
+				//Filters out snippets w/ strings in question
+				!/view your reading history/.test(value) &&
+				!/Find your bookmarks/.test(value) &&
+				!/Audio for this article/.test(value) &&
+				!/This translation has been automatically/.test(value) &&
+				!/Full Disclaimer/.test(value) &&
+				!(/first published/.test(value) && /20/.test(value)) &&
+				!/Chief Magistrate will neither advise nor/.test(value) &&
+				!/@globeandmail.com/.test(value) &&
+				!/Sign up today./.test(value) &&
+				!(/newsletter/.test(value) && /your inbox/.test(value))
+			);
+		});
 
 		return snippets;
 	},

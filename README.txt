@@ -318,22 +318,69 @@ URLS TESTED:
 "https://www.axios.com/trump-associates-convicted-mueller-investigations-206295a1-5abc-4573-be25-4da19d9adcc9.html";
 "https://www.axios.com/dow-closes-28000-first-time-ever-a69aeecb-a9c2-44f4-a432-c126d6aee273.html";
 
+"https://www.breitbart.com/clips/2019/11/15/pelosi-trump-attacked-yovanovitch-partly-because-of-his-insecurity-as-an-impostor/";
+"https://www.breitbart.com/health/2019/11/15/texas-teen-helps-save-homeless-man-trapped-inside-manhole/";
+"https://www.breitbart.com/politics/2019/11/15/prince-andrew-i-have-no-recollection-of-ever-meeting-epstein-victim-who-named-him-in-underage-sex-ring/";
+"https://www.breitbart.com/entertainment/2019/11/15/taylor-swift-accused-of-using-fanbase-in-calculated-manner-that-endangers-record-labels-employees/";
+"https://www.breitbart.com/politics/2019/11/15/roger-stone-found-guilty-of-all-7-charges-brought-by-mueller-probe/";
+
+"https://www.businessinsider.com/prince-andrew-suggests-virginia-roberts-epstein-photo-is-fake-2019-11";
+"https://www.businessinsider.com/federal-study-shows-that-some-heart-surgeries-arent-needed-2019-11";
+"https://www.businessinsider.com/mcdonalds-employees-were-shocked-by-ceos-termination-2019-11";
+"https://www.businessinsider.com/fox-news-and-cnn-covered-trump-impeachment-hearings-differently-2019-11";
+"https://www.businessinsider.com/spacex-starlink-satellites-risks-astronomy-space-junk-2019-11";
+
+"https://www.cbc.ca/news/canada/prince-edward-island/pei-value-of-piano-1.5359491";
+"https://www.cbc.ca/news/health/cannabinoid-hyperemesis-syndrome-underdiagnosed-canada-1.5362007";
+"https://www.cbc.ca/sports/olympics/wada-20th-anniversary-russia-1.5362355";
+"https://www.cbc.ca/news/technology/bloodsuckers-1.5361074";**
+"https://www.cbc.ca/news/world/mark-sandy-white-house-budget-official-testimony-impeachment-robe-1.5362504";
+
+"https://www.csmonitor.com/USA/Politics/2019/1115/Who-can-win-in-2020-Voters-shift-focus-toward-centrists";
+"https://www.csmonitor.com/World/Asia-Pacific/2019/1114/Behind-Hong-Kong-s-resolve-Locals-view-of-a-city-under-siege";
+"https://www.csmonitor.com/Science/2019/1115/Mini-but-mighty-How-microbes-make-the-world";
+"https://www.csmonitor.com/USA/Education/2019/1115/Just-the-facts-but-whose-facts-College-newspapers-face-student-ire";
+"https://www.csmonitor.com/USA/Politics/2019/1114/My-dear-friend-Why-Trump-Erdogan-ties-endure";
+
+"https://www.democracynow.org/2019/11/15/headlines/two_killed_as_16_year_old_student_opens_fire_at_la_county_high_school";
+"https://www.democracynow.org/2019/11/15/headlines/el_paso_walmart_reopens_three_months_after_massacre_by_racist_gunman";
+"https://www.democracynow.org/2019/11/15/headlines/house_speaker_pelosi_accuses_trump_of_bribery_an_impeachable_offense";
+"https://www.democracynow.org/2019/11/11/should_first_primaries_be_in_whitest";
+"https://www.democracynow.org/2019/11/15/headlines/climate_activist_greta_thunberg_sets_sail_for_europe";
+
+"https://www.theglobeandmail.com/sports/article-maclean-calls-first-hockey-night-without-cherry-the-end-of-an-era/";
+"https://www.theglobeandmail.com/canada/article-vaping-advertising-marketing-investigation/";
+"https://www.theglobeandmail.com/life/parenting/article-how-do-i-approach-the-subject-of-vaping-with-my-son/";
+"https://www.theglobeandmail.com/business/article-alberta-bc-make-the-case-for-canadian-natural-gas-in-asia/";
+"https://www.theglobeandmail.com/world/article-huge-fires-blaze-in-hong-kong-as-protesters-unleash-stash-of-petrol/";
+
+"https://www.macleans.ca/politics/worldpolitics/donald-trump-is-a-big-fan-of-erdogan-noted-global-tough-guy/";
+"https://www.macleans.ca/news/world/as-protests-deepen-in-iraq-canada-is-caught-in-the-middle/";
+"https://www.macleans.ca/politics/ottawa/this-whole-national-unity-thing-is-going-swimmingly-politics-insider/";
+"https://www.macleans.ca/culture/television/the-crown-season-three-a-preview-of-all-10-episodes/";
+"https://www.macleans.ca/politics/ottawa/blanchet-to-wexiters-no-separatist-tips-for-you-politics-insider/";
+
+"https://www.motherjones.com/impeachment/2019/11/bill-barr-trump-federalist-society-speech-reaction/";
+"https://www.motherjones.com/politics/2019/11/colin-kaepernick-nfl-roger-goodell-workout-yikes-football/";
+"https://www.motherjones.com/politics/2019/11/rudy-giuliani-bad-lawyer/";
+"https://www.motherjones.com/politics/2019/11/new-york-times-china-leaks-crackdown-muslims-uighurs-xi/";
+"https://www.motherjones.com/impeachment/2019/11/new-trump-ukraine-call-transcript-raises-more-questions/";
+
+"https://www.nationalreview.com/2019/11/what-do-republican-voters-want/";
+"https://www.nationalreview.com/2019/11/book-review-serotonin-michel-houllebecq-sociopolitical-moment/";
+"https://www.nationalreview.com/2019/11/theater-review-heroes-of-the-fourth-turning-dramatizes-crunchy-conservatives/";
+"https://www.nationalreview.com/corner/corbyn-trump-and-power/";
+
+"https://nypost.com/2019/11/16/prince-andrew-says-he-couldnt-sweat-in-attempt-to-debunk-epstein-accusers-claim/";*
+"https://nypost.com/2019/11/16/colin-kaepernicks-nfl-workout-last-minute-change-causes-chaos/";*
+"https://nypost.com/2019/11/16/shocking-video-shows-moment-car-driven-by-nypd-officer-garman-chen-crashes-on-fdr-drive/";*
+"https://nypost.com/2019/11/16/al-sharpton-gets-1m-in-pay-from-his-own-charity/";*
+"https://nypost.com/2019/11/16/el-chapos-wife-emma-coronel-aispuro-makes-classy-debut-on-on-vh1s-cartel-crew/";*
+
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 TODO:
-https://www.bloomberg.com/news
-breitbart
-businessinsider
-cbc
-csmonitor
-democracynow
-theglobeandmail
-macleans
-motherjones
-nationalreview
-nypost
-nytimes
 newsmax
 reuters
 slate
@@ -345,4 +392,5 @@ newyorker
 thestar
 washingtontimes
 
+https://www.bloomberg.com/news ***
 https://www.huffpost.com/ ***

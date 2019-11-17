@@ -10,7 +10,7 @@ const snippets = require("./snippets.js");
 // parseData(html);
 
 const url =
-	"https://www.bloomberg.com/news/articles/2019-11-16/pla-soldiers-join-effort-to-clean-up-areas-damaged-by-protests?srnd=premium-asia";
+	"https://nypost.com/2019/11/16/el-chapos-wife-emma-coronel-aispuro-makes-classy-debut-on-on-vh1s-cartel-crew/";
 
 axios.get(url).then(
 	response => {

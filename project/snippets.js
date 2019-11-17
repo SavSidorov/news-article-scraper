@@ -48,7 +48,16 @@ module.exports = {
 			"wsj",
 			"theguardian",
 			"axios",
-			"bloomberg"
+			"breitbart",
+			"businessinsider",
+			"cbc",
+			"csmonitor",
+			"democracynow",
+			"theglobeandmail",
+			"macleans",
+			"motherjones",
+			"nationalreview",
+			"nypost"
 			// Add to this list to increase number of supported urls
 		];
 		console.log("Number of supported websites: " + supportedUrls.length);
@@ -117,7 +126,8 @@ function generalFormattingAndFiltering(snippets) {
 			!/contribute to this report./.test(value) &&
 			!/contributed to this article./.test(value) &&
 			!/contribute to this article./.test(value) &&
-			!(/Updated/.test(value) && /20/.test(value))
+			!(/Updated/.test(value) && /20/.test(value)) &&
+			!(/—/.test(value) && /@/.test(value) && /20/.test(value))
 
 			//TODO: Deactivate the rules below if adding new website support;
 			//They are used for filtering all snippets after the encountered string in some specific scrapers
