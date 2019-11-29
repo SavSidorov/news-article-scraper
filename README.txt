@@ -479,3 +479,38 @@ https://www.huffpost.com/ ***
 https://www.projectveritas.com/ ***
 https://wikileaks.org/ ***
 https://www.msn.com/en-us/news ***
+
+https://www.nature.com/
+https://www.technologyreview.com/
+https://www.popularmechanics.com/
+https://www.popsci.com/
+https://www.newscientist.com/
+https://www.quantamagazine.org/
+https://quillette.com/
+https://www.sciencenews.org/
+https://www.scientificamerican.com/
+https://www.wired.com/
+http://nautil.us/
+https://futurism.com/
+https://kotaku.com/
+https://thenextweb.com/
+https://gizmodo.com/
+https://mashable.com/
+https://www.theverge.com/
+https://www.digitaltrends.com/
+https://venturebeat.com/
+https://www.engadget.com/
+https://www.slashgear.com/
+https://www.eurogamer.net/
+https://www.inverse.com/
+https://www.sciencemag.org/
+http://www.universal-sci.com/
+https://www.nationalgeographic.com/
+https://cleantechnica.com/
+https://www.geekwire.com/
+https://slashdot.org/
+https://thehackernews.com/
+https://arstechnica.com/
+https://www.techmeme.com/
+https://phys.org/
+http://discovermagazine.com/

@@ -100,9 +100,17 @@ module.exports = {
 		//Filter snippets based on website match
 		let websiteMatch = false;
 		for (let i = 0; i < supportedUrls.length; i++) {
-			let substring = supportedUrls[i] + ".";
+			let substringCom = supportedUrls[i] + ".com";
+			let substringOrg = supportedUrls[i] + ".org";
+			let substringCa = supportedUrls[i] + ".ca";
+			let substringCoUk = supportedUrls[i] + ".co.uk";
 
-			if (url.includes(substring)) {
+			if (
+				url.includes(substringCom) ||
+				url.includes(substringOrg) ||
+				url.includes(substringCa) ||
+				url.includes(substringCoUk)
+			) {
 				console.log("Match found: " + supportedUrls[i]);
 				snippets = filterMatchedSnippets[supportedUrls[i]](snippets);
 				websiteMatch = true;
