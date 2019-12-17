@@ -10,7 +10,7 @@ const snippets = require("./snippets.js");
 // parseData(html);
 
 const url =
-	"https://cnn.com/2019/09/21/europe/ukraine-trump-analysis-intl/index.html";
+	"https://www.washingtonpost.com/nation/2019/12/05/corrections-trainees-suspended-performing-nazi-salute-disturbing-photo/";
 
 axios.get(url).then(
 	response => {

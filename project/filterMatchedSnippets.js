@@ -855,6 +855,14 @@ module.exports = {
 		return snippets;
 	},
 	washingtonpost: function(snippets) {
+		//If "Read more:" snippet encountered, delete all snippets after it
+		for (let i = 0; i < snippets.length; i++) {
+			if (/Read more:/.test(snippets[i])) {
+				snippets.splice(i, snippets.length - i);
+				break;
+			}
+		}
+
 		snippets = snippets.filter(function(value) {
 			return (
 				//Filters out snippets w/ strings in question
